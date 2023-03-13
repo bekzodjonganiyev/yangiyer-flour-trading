@@ -8,10 +8,10 @@ import { LidershipCard } from "../../components/lidership_card/LidershipCard";
 import { Products } from "../../components/products";
 import { Carusel } from "../../components/slider";
 import { Statistics } from "../../components/statistics/Statistics";
+import { Partners } from '../../components/partners'
+import {ContactUs} from '../contact_us/ContactUs'
 
 import { useAppContext } from "../../context/app.contex";
-import ContactUs from '../contact_us/ContactUs'
-import { Partners } from '../partnres/Partners'
 
 export const Home = () => {
   console.log("Home");

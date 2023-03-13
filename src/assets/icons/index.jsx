@@ -134,7 +134,7 @@ const InstagramIcon = ({ color = "#F06D06" }) => (
 const YouTubeIcon = ({ color = "#F06D06" }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    height="25"
+    height="20"
     width="30"
     viewBox="-35.20005 -41.33325 305.0671 247.9995"
   >
