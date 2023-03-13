@@ -6,7 +6,7 @@ import { useAppContext } from "../../context/app.contex";
 export const MainHeader = () => {
   const { colors } = useAppContext();
   return (
-    <div className={`${colors.lightBgColor3} sticky top-0 `}>
+    <div className={`${colors.lightBgColor3} sticky top-0 z-50`}>
       <div className="container mx-auto flex items-center justify-between">
         <Link to="/">
           <div className="flex items-center justify-between">

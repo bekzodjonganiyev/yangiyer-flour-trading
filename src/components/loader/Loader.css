@@ -1,17 +1,24 @@
-.wheat {
-    width: 200px;
-    height: 200px;
-    background-image: url("https://www.transparenttextures.com/patterns/wheat.png");
-    background-size: 100%;
-    animation: waves 5s infinite linear;
+  
+  .wheat {
+    width: 50px;
+    height: 70px;
+    background-image: url("https://cdn.pixabay.com/photo/2016/06/01/19/44/wheat-1427220_960_720.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: shake 0.5s ease-in-out infinite;
   }
   
-  @keyframes waves {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 100% 0;
-    }
+  @keyframes shake {
+    0% { transform: rotateZ(0); }
+    10% { transform: rotateZ(10deg); }
+    20% { transform: rotateZ(-10deg); }
+    30% { transform: rotateZ(10deg); }
+    40% { transform: rotateZ(-10deg); }
+    50% { transform: rotateZ(10deg); }
+    60% { transform: rotateZ(-10deg); }
+    70% { transform: rotateZ(10deg); }
+    80% { transform: rotateZ(-10deg); }
+    90% { transform: rotateZ(10deg); }
+    100% { transform: rotateZ(0); }
   }
   
