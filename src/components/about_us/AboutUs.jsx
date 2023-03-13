@@ -19,6 +19,7 @@ export const AboutUs = () => {
         <div className="grid grid-cols-2 gap-10 w-1/2">
           {[1, 2, 3, 4].map((item) => (
             <LazyLoadImage
+              key={item}
               src="https://media.istockphoto.com/id/1400865154/photo/insurance-and-risk-management-concept.jpg?b=1&s=170667a&w=0&k=20&c=txTSImC8-K3Py8sLhNdq6i_38D4gyGSzKOVW5KgmGPY="
               alt={`Image Alt`}
               className="w-96 h-64"

@@ -1,11 +1,13 @@
 import React from "react";
 
+import fakeVerstka2 from "../../assets/images/fake_verstka2.png"
+
 import { AboutUs } from "../../components/about_us";
+import { Gallary } from "../../components/gallary/Gallary";
 import { LidershipCard } from "../../components/lidership_card/LidershipCard";
 import { Products } from "../../components/products";
 import { Carusel } from "../../components/slider";
-import fakeVerstka2 from "../../assets/images/fake_verstka2.png"
-
+import { Statistics } from "../../components/statistics/Statistics";
 
 import { useAppContext } from "../../context/app.contex";
 
@@ -31,12 +33,14 @@ export const Home = () => {
           <div className="w-4/6 flex gap-2 h-96">
             {
               [1,2,3,4].map(item => (
-                <LidershipCard />
+                <LidershipCard key={item}/>
               ))
             }
           </div>
         </div>
       </div>
+      <Statistics />
+      <Gallary />
     </div>
   );
 };
