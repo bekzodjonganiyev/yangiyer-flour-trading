@@ -1,0 +1,1 @@
+export {Lidership} from "./LidershipCard"

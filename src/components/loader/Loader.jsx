@@ -1,4 +1,5 @@
 import React from "react";
+import "./Loader.css"
 
 export const Loader = () => {
   return (
@@ -6,6 +7,7 @@ export const Loader = () => {
       <div className="p-10 text-3xl bg-orange-400">
         Loading...
       </div>
+      {/* <div classname="wheat bg-black z-40"></div> */}
     </div>
   );
 };
