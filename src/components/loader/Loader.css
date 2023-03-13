@@ -1,0 +1,17 @@
+.wheat {
+    width: 200px;
+    height: 200px;
+    background-image: url("https://www.transparenttextures.com/patterns/wheat.png");
+    background-size: 100%;
+    animation: waves 5s infinite linear;
+  }
+  
+  @keyframes waves {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+  
