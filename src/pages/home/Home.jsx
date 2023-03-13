@@ -10,6 +10,8 @@ import { Carusel } from "../../components/slider";
 import { Statistics } from "../../components/statistics/Statistics";
 
 import { useAppContext } from "../../context/app.contex";
+import ContactUs from '../contact_us/ContactUs'
+import { Partners } from '../partnres/Partners'
 
 export const Home = () => {
   console.log("Home");
@@ -41,6 +43,8 @@ export const Home = () => {
       </div>
       <Statistics />
       <Gallary />
+      <Partners />
+      <ContactUs />
     </div>
   );
 };
