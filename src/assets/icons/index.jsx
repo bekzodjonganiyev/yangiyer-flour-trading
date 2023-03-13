@@ -13,6 +13,12 @@ const MainLogo = () => (
     />
   </svg>
 );
+const LeftIcon = ()=>(
+  <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.14375 10.2169C0.89375 10.3807 0.64075 10.3903 0.38475 10.2457C0.12875 10.1011 0.0005 9.87735 0 9.57454V1.75223C0 1.44992 0.12825 1.22621 0.38475 1.0811C0.64125 0.935991 0.89425 0.945564 1.14375 1.10982L7.25625 5.02097C7.48125 5.17213 7.59375 5.38627 7.59375 5.66338C7.59375 5.9405 7.48125 6.15464 7.25625 6.3058L1.14375 10.2169Z" fill="#FFBC13"/>
+</svg>
+
+)
 
 const PhoneIcon = () => (
   <svg
@@ -63,8 +69,8 @@ const DropDownIcon = () => (
 
 const FacebookIcon = ({ color = "#F06D06" }) => (
   <svg
-    width="32"
-    height="32"
+    width="20"
+    height="20"
     viewBox="0 0 32 32"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +84,7 @@ const FacebookIcon = ({ color = "#F06D06" }) => (
 
 const TwitterIcon = ({ color = "#F06D06" }) => (
   <svg
-    width="32"
+    width="20"
     height="32"
     viewBox="0 0 32 32"
     fill="none"
@@ -93,8 +99,8 @@ const TwitterIcon = ({ color = "#F06D06" }) => (
 
 const InstagramIcon = ({ color = "#F06D06" }) => (
   <svg
-    width="32"
-    height="32"
+    width="20"
+    height="20"
     viewBox="0 0 32 32"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -128,8 +134,8 @@ const InstagramIcon = ({ color = "#F06D06" }) => (
 const YouTubeIcon = ({ color = "#F06D06" }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    height="45"
-    width="45"
+    height="25"
+    width="30"
     viewBox="-35.20005 -41.33325 305.0671 247.9995"
   >
     <path
@@ -142,8 +148,8 @@ const YouTubeIcon = ({ color = "#F06D06" }) => (
 
 const TelegramIcon = ({ color = "#F06D06" }) => (
   <svg
-    width="32"
-    height="32"
+    width="20"
+    height="20"
     viewBox="0 0 32 32"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -442,6 +448,7 @@ const LangIcon = () => (
 );
 export {
   MainLogo,
+  LeftIcon,
   PhoneIcon,
   DropDownIcon,
   FacebookIcon,
