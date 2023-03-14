@@ -22,7 +22,7 @@ export const MainHeader = () => {
           <NavLink to="products">Products</NavLink>
           <NavLink to="lidership">Lidership</NavLink>
           <NavLink to="partners">Partners</NavLink>
-          <a href={"#"}>Contact Us</a>
+          <NavLink to="contact-us">Contact Us</NavLink>
           <button>Language</button>
           <div className="w-10 h-5 bg-black rounded-xl relative"></div>
         </div>

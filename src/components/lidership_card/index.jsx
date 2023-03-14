@@ -1,1 +1,1 @@
-export {Lidership} from "./LidershipCard"
+export {LidershipCard} from "./LidershipCard"
