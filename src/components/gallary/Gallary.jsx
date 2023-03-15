@@ -78,7 +78,7 @@ export const Gallary = () => {
 
       <PhotoAlbum
         photos={photos}
-        layout="columns"
+        layout="rows"
         targetRowHeight={300}
         onClick={({ index }) => setIndex(index)}
       />

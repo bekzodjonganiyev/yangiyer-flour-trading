@@ -22,11 +22,11 @@ export const Home = () => {
       <Carusel />
       <AboutUs />
       <Products />
-      <div className="my-10">
+      {/* <div className="my-10">
         <h1
           className={`${colors.lightTextColor2} font-bold text-3xl mb-8 text-center`}
         >
-          Lidership
+          Leadership
         </h1>
         <div className="flex items-center">
           <div className="w-2/6">
@@ -40,7 +40,8 @@ export const Home = () => {
             }
           </div>
         </div>
-      </div>
+      </div> */}
+      90 668 00 35
       <Statistics />
       <Gallary />
       <Partners />

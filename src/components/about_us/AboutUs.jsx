@@ -8,7 +8,7 @@ export const AboutUs = () => {
   const { colors } = useAppContext();
   console.log(colors);
   return (
-    <div className="relative py-20">
+    <div className="relative py-20 container mx-auto">
       <h1
         className={`${colors.lightTextColor2} text-3xl font-bold text-center mb-10`}
       >

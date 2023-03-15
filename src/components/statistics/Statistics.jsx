@@ -8,7 +8,7 @@ export const Statistics = () => {
   const { colors } = useAppContext();
 
   return (
-    <div className="my-10">
+    <div className="my-10 container mx-auto ">
       <h1
         className={`${colors.lightTextColor2} text-3xl font-bold text-center mb-10`}
       >

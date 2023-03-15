@@ -20,7 +20,7 @@ export const MainHeader = () => {
         <div className={`flex items-center justify-between w-6/12 ${colors.lightTextColor2} font-bold`}>
           <NavLink to="about-us">About Us</NavLink>
           <NavLink to="products">Products</NavLink>
-          <NavLink to="lidership">Lidership</NavLink>
+          {/* <NavLink to="lidership">Leadership</NavLink> */}
           <NavLink to="partners">Partners</NavLink>
           <NavLink to="contact-us">Contact Us</NavLink>
           <button>Language</button>

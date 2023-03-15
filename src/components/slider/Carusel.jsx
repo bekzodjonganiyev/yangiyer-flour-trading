@@ -5,7 +5,7 @@ import bgVideo from "../../assets/images/bg_vide.avif"
 export const Carusel = () => {
   const arr = [1, 2, 3, 4, 5, 5, 6, 76, 7];
   return (
-    <div className=" my-10">
+    <div className="mb-10">
       {/* <Carousel slideInterval={5000}>
         {arr.map((item) => (
           <img

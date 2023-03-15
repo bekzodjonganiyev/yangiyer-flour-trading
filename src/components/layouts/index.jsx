@@ -9,7 +9,7 @@ export const UserLayout = () => {
     <>
       <TopHeader />
       <MainHeader />
-      <main className="container mx-auto flex-auto">
+      <main className="flex-auto">
         <Outlet />
       </main>
       <Footer />
