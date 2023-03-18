@@ -1,17 +1,25 @@
-import React from "react";
+import { useAppContext } from "../../context/app.contex";
 
 export const ContactUs = () => {
+  const { colors } = useAppContext();
   return (
-    <>
-      <div className="container mx-auto w-[100%] my-10 flex xl:flex-row flex-col gap-10">
-        <h1 className="container mx-auto w-[90%] flex justify-center mt-14 -mb-6 font-semibold text-4xl text-sky-900">
-          Contact Us
-        </h1>
-      </div>
-      <div className="container mx-auto w-[70%] bg-amber-400 py-10">
+    <div>
+      <h1
+        className={`container mx-auto w-[90%] text-center my-14 font-semibold text-4xl ${colors.lightTextColor2}`}
+      >
+        Contact Us
+      </h1>
+      <div
+        className={`container mx-auto w-[70%] ${colors.lightBgColor1} py-10`}
+      >
         <form className="container mx-auto w-[80%]">
-            <h3 className="text-3xl font-semibold text-sky-900 mb-3">Yangiyer flour treading</h3>
-            <p className="text-sky-900 mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quasi veritatis, recusandae</p>
+          <h3 className="text-3xl font-semibold text-sky-900 mb-3">
+            Yangiyer flour treading
+          </h3>
+          <p className="text-sky-900 mb-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quasi
+            veritatis, recusandae
+          </p>
           <label className="block ">
             <input
               type="text"
@@ -67,7 +75,6 @@ export const ContactUs = () => {
           </button>
         </form>
       </div>
-    </>
+    </div>
   );
 };
-
