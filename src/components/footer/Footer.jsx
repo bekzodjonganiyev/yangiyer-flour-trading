@@ -27,33 +27,33 @@ export const Footer = () => {
                 </span>
               </p>
             </div>
-            <div>
-              <p className="text-sky-900 mb-2 w-[400px] text-xl">
-                Address: Republic of Uzbekistan, Sirdaryo region, Yangiyer city,
-                industrial area
-              </p>
-            </div>
-            <div className="icons">
-              <div className="flex items-center gap-3 w-3/12">
-                <a href="#" className="w-[40px] bg-amber-500 p-2">
-                  {" "}
-                  <FacebookIcon
-                    className={`flex items-center justify-center mx-auto`}
-                    color="#000"
-                  />
-                </a>
-                <a href="#" className="w-[40px] bg-amber-500 p-2">
-                  <TelegramIcon color="#000" />
-                </a>
-                <a href="#" className="w-[40px] bg-amber-500 p-2">
-                  <InstagramIcon color="#000" />
-                </a>
-                <a href="#" className="w-[40px] bg-amber-500 p-2">
-                  <YouTubeIcon color="#000" />
-                </a>
-              </div>
-            </div>
           </Link>
+          <div>
+            <p className="text-sky-900 mb-2 w-[400px] text-xl">
+              Address: Republic of Uzbekistan, Sirdaryo region, Yangiyer city,
+              industrial area
+            </p>
+          </div>
+          <div className="icons">
+            <div className="flex items-center gap-3 w-3/12">
+              <a href="#" className="w-[40px] bg-amber-500 p-2">
+                {" "}
+                <FacebookIcon
+                  className={`flex items-center justify-center mx-auto`}
+                  color="#000"
+                />
+              </a>
+              <a href="#" className="w-[40px] bg-amber-500 p-2">
+                <TelegramIcon color="#000" />
+              </a>
+              <a href="#" className="w-[40px] bg-amber-500 p-2">
+                <InstagramIcon color="#000" />
+              </a>
+              <a href="#" className="w-[40px] bg-amber-500 p-2">
+                <YouTubeIcon color="#000" />
+              </a>
+            </div>
+          </div>
         </div>
         <div
           className={` items-center justify-between ${colors.lightTextColor2} font-bold`}
@@ -125,9 +125,9 @@ export const Footer = () => {
         <div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11984.900307199561!2d69.23442929282095!3d41.325718815889005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b737f1f4161%3A0xab6842dfd7a53fdf!2sToshkent%20kimyo-texnologiya%20instituti!5e0!3m2!1suz!2s!4v1652868919695!5m2!1suz!2s"
-            allowFullscreen=""
+            allowFullScreen={true}
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
             className="rounded-xl h-56 w-96"
           ></iframe>
         </div>
