@@ -19,10 +19,10 @@ export const Footer = () => {
     <>
      
   
-    <footer className={`${colors.lightBgColor3}`}>
-      <div className="container-fluid mx-auto w-[90%] my-5 flex  justify-between items-center max-md:flex-col">
-        <div className="lg:flex md:flex   gap-4 items-end justify-between">
-        <div className="container lg:w-2/12 xl:w-4/12 md-w-1/2 sm:w-full ">
+    <footer className={`bg-[#fff9e9] mt-[100px] py-5 ${colors.lightBgColor3}`}>
+      <div className="container-fluid w-[90%]  ">
+        <div className="lg:flex md:flex container-fluid mx-auto   my-2   flex flex-wrap   gap-4 items-end justify-between">
+        <div className=" w-[300px] mx-auto m-2  h-[200px] ">
           <Link to="/">
             <div className="flex items-center ">
               <img src={logo} alt="Main logo" className="w-30 h-24" />
@@ -62,7 +62,7 @@ export const Footer = () => {
             </div>
           </Link>
         </div>
-        <div className={` items-center justify-between ${colors.lightTextColor2} font-bold xl:text-base lg:w-3/12 md:w-1/2 `}
+        <div className={`w-[250px] mx-auto m-2  h-[200px] items-center justify-between ${colors.lightTextColor2} font-bold xl:text-base `}
         >
           <h3 className="text-2xl my-3 mx-auto">Quick Links</h3>
           <NavLink className={`flex items-center my-2 mx-2`} to="about-us">
@@ -90,7 +90,7 @@ export const Footer = () => {
           </a>
         </div>
 
-        <div className={` items-center justify-between ${colors.lightTextColor2} font-bold lg:tex-3/12 md:w-1/2 mx-auto `}
+        <div className={`w-[300px] mx-auto m-2  h-[200px] items-center justify-between ${colors.lightTextColor2} font-bold  `}
         >
           <h3 className="text-2xl my-2">Contacts</h3>
           <div className={`flex items-center `}>
@@ -104,10 +104,12 @@ export const Footer = () => {
             </a>
             <span className="mx-4"> +998 71 875 64 56</span>
           </div>
+
+          
           <div className={`flex items-center `}>
             <a
               href="#"
-              className="w-[40px] bg-amber-500 m-0  h-[40px] flex items-center my-2"
+              className="w-[40px] bg-amber-500 m-0  h-[40px] flex items-center my-2 "
             >
               <span className="text-2xl flex items-center justify-center mx-auto">
                 E
@@ -127,7 +129,7 @@ export const Footer = () => {
             <span className="mx-4"> Mon -Fri 9 am 6 pm</span>
           </div>
         </div>
-        <div className="md:w-1/2">
+        <div className=" w-[200px] mx-auto m-2  h-[200px]">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11984.900307199561!2d69.23442929282095!3d41.325718815889005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b737f1f4161%3A0xab6842dfd7a53fdf!2sToshkent%20kimyo-texnologiya%20instituti!5e0!3m2!1suz!2s!4v1652868919695!5m2!1suz!2s"
             allowFullscreen=""
