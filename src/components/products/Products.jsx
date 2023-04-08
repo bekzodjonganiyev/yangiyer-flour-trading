@@ -69,15 +69,7 @@ export const Products = () => {
                 kjhgkhgkj
               </button>
             )}
-            <iframe
-              width="100%"
-              height="506"
-              src="https://www.youtube.com/embed/qx9nshX9CQQ"
-              title="Micro eCommerce with Python, Django, Serverless Postgres, Stripe, TailwindCSS and more"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+            <iframe width="100%" height="506" src="https://www.youtube.com/embed/G0zm9TybxpU" title="Firma uchun video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
         </div>
       )}

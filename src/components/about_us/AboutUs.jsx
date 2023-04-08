@@ -17,15 +17,15 @@ export const AboutUs = () => {
      <div className="">
           <div  className="  gap-6 grid grid-cols-2 rounded-md ">
           
-            <img className="rounded-md" src="https://media.istockphoto.com/id/1400865154/photo/insurance-and-risk-management-concept.jpg?b=1&s=170667a&w=0&k=20&c=txTSImC8-K3Py8sLhNdq6i_38D4gyGSzKOVW5KgmGPY=" alt="" />
+            <img className="rounded-md w-[600px]" src="https://backend.tkti.uz/uploads/file-1680958607718.jpg" alt="" />
          
           
-            <img className="rounded-md" src="https://media.istockphoto.com/id/1400865154/photo/insurance-and-risk-management-concept.jpg?b=1&s=170667a&w=0&k=20&c=txTSImC8-K3Py8sLhNdq6i_38D4gyGSzKOVW5KgmGPY=" alt="" />
+            <img className="rounded-md w-[600px]" src="https://backend.tkti.uz/uploads/file-1680958588783.jpg" alt="" />
          
-            <img className="rounded-md" src="https://media.istockphoto.com/id/1400865154/photo/insurance-and-risk-management-concept.jpg?b=1&s=170667a&w=0&k=20&c=txTSImC8-K3Py8sLhNdq6i_38D4gyGSzKOVW5KgmGPY=" alt="" />
+            <img className="rounded-md w-[600px]" src="https://backend.tkti.uz/uploads/file-1680958572562.jpg" alt="" />
           
           
-            <img className="rounded-md" src="https://media.istockphoto.com/id/1400865154/photo/insurance-and-risk-management-concept.jpg?b=1&s=170667a&w=0&k=20&c=txTSImC8-K3Py8sLhNdq6i_38D4gyGSzKOVW5KgmGPY=" alt="" />
+            <img className="rounded-md w-[600px]" src="https://backend.tkti.uz/uploads/file-1680958553041.jpg" alt="" />
           
 
           </div>
