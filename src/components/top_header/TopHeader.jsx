@@ -15,11 +15,11 @@ export const TopHeader = () => {
     >
       <div className="py-4 container mx-auto w-[90%] flex items-center justify-between">
         {/* Social networks */}
-        <div className="items-center lg:flex sm:block grid-span-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 justify-center  md:my-3 sm:my-2 ">
-          <a href="#"><FacebookIcon color="#000" /></a>
-          <a href="#"><TelegramIcon color="#000" /></a>
-          <a href="#"><InstagramIcon color="#000" /></a>
-          <a href="#"><YouTubeIcon color="#000" /></a>
+        <div className="items-center lg:flex sm:block grid-span-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 justify-center  md:my-3 sm:my-2  ">
+          <a href="# " className="mx-2"><FacebookIcon color="#000" /></a>
+          <a href="#" className="mx-2"><TelegramIcon color="#000" /></a>
+          <a href="#" className="mx-2"><InstagramIcon color="#000" /></a>
+          <a href="#" className="mx-2"><YouTubeIcon color="#000" /></a>
         </div>
 
         <div className="lg:flex md:flex justify-between lg:w-9/12 md-w-full sm:w-full">
