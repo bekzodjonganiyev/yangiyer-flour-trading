@@ -11,6 +11,14 @@ import bgVideo2 from "../../assets/images/bg2.jpg";
 
 export const Carusel = () => {
   const arr = [1, 2, 3, 4, 5, 5, 6, 76, 7];
+  const images = [
+    "https://backend.tkti.uz/uploads/file-1680953905268.jpg",
+    "https://backend.tkti.uz/uploads/file-1680953888366.jpg",
+    "https://backend.tkti.uz/uploads/file-1680953777534.jpg",
+    "https://backend.tkti.uz/uploads/file-1680953754646.jpg",
+    "https://backend.tkti.uz/uploads/file-1680953713364.jpg",
+    "https://backend.tkti.uz/uploads/file-1680953240671.jpg"
+  ]
   const settings = {
     dots: true,
     infinite: true,
@@ -44,24 +52,14 @@ export const Carusel = () => {
         fade={true}
         pauseOnHover={false}
       >
-        <div>
-          <img src={bgVideo} alt="" className="w-full" />{" "}
-        </div>
-        <div>
-          <img src={bgVideo1} alt="" className="w-full" />{" "}
-        </div>
-        <div>
-          <img src={bgVideo2} alt="" className="w-full" />{" "}
-        </div>
-        <div>
-          <img src={bgVideo} alt="" className="w-full" />{" "}
-        </div>
-        <div>
-          <img src={bgVideo1} alt="" className="w-full" />{" "}
-        </div>
-        <div>
-          <img src={bgVideo2} alt="" className="w-full" />{" "}
-        </div>
+        {
+          images.map(item => (
+            <div className="">
+              <img src={item} alt="un firmasi" className="w-full" />
+            </div>
+          ))
+        }
+        
       </Slider>
     </div>
   );

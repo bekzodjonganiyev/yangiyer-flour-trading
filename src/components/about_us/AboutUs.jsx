@@ -44,8 +44,8 @@ export const AboutUs = () => {
               magnam accusantium deleniti debitis minus aspernatur est quis
               quaerat iure unde.
             </p>
-            <ul className="mb-8">
-              {[1, 2, 3, 4, 5, 6, 7].map((item) => (
+            <ul className="mb-6">
+              {[1, 2, 3, 4,5].map((item) => (
                 <li
                   key={item}
                   className={`${colors.lightTextColor2} font-semibold mb-3 flex items-center`}

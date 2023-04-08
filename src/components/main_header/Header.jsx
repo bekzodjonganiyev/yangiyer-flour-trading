@@ -38,7 +38,7 @@ export const MainHeader = () => {
   return (
     <>
      <header
-      className={`${colors.lightBgColor3} shadow container  sticky top-0 z-50 lg:flex justify-between`}
+      className={`${colors.lightBgColor3} shadow w-full  sticky top-0 z-50 lg:flex justify-between`}
     >
       <div className="flex items-center justify-between container mx-auto w-[90%]">
         <div className="w-1/3 md:w-2/3  sm:min-w-[400px]">
