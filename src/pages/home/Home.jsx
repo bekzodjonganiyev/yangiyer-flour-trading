@@ -41,7 +41,7 @@ export const Home = () => {
           </div>
         </div>
       </div> */}
-      90 668 00 35
+     
       <Statistics />
       <Gallary />
       <Partners />
