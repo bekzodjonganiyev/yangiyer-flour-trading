@@ -2,7 +2,7 @@ import { useAppContext } from "../../context/app.contex";
 import tringle from "../../assets/images/tringle.png";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
-import fakeVerstka1 from "../../assets/images/fake_verstka1.jpg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useState } from "react";
 export const Products = () => {
   const {t} = useTranslation();
@@ -10,31 +10,36 @@ export const Products = () => {
   const [isModal, setIsModal] = useState(false);
   const [visible, setVisible] = useState(false);
   return (
-    <>
-      <h2 className={`${colors.lightTextColor2} text-center text-3xl font-bold mb-2`}>
+    <div className="">
+      <div className="mt-[50px]">
+      <h2 className={`${colors.lightTextColor2} text-center text-3xl font-bold mb-4`}>
             Yangiyer flour{" "}
-            <span className={`${colors.lightTextColor3}`}>trading breands</span>
+            <span className={`${colors.lightTextColor3}`}>trading brends</span>
           </h2>
-          <p className="text-center text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi eligendi dolorem, nemo ex eum ipsum repellat dignissimos iusto iure recusandae?</p>
+          </div>
+          <p className="text-center text-xl mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi eligendi dolorem, nemo ex eum ipsum repellat dignissimos iusto iure recusandae?</p>
         <div
-        className="container w-[80%] mx-auto   my-2  justify-between items-center flex flex-wrap  "
+        className="container w-[80%] mx-auto   my-5  justify-between items-center flex flex-wrap  "
        
       >
-         <div className=" w-[250px] h-full m-2"><img src="https://backend.tkti.uz/uploads/file-1681043316631.png" alt="" /></div>
-            <div className="  w-[250px] h-full m-2"><img src="https://backend.tkti.uz/uploads/file-1681043362030.png" alt="" /></div>
-            <div className="  w-[250px] h-full m-2"><img src="https://backend.tkti.uz/uploads/file-1681043403804.png" alt="" /></div>
-            <div className="  w-[250px] h-full m-2"><img src="https://backend.tkti.uz/uploads/file-1681043430632.png" alt="" /></div>
+         <div className=" w-[250px] h-full m-2">
+          <LazyLoadImage src="https://backend.tkti.uz/uploads/file-1681043316631.png" 
+          />
+</div>
+            <div className="  w-[250px] h-full m-2"><LazyLoadImage src="https://backend.tkti.uz/uploads/file-1681043362030.png"  /></div>
+            <div className="  w-[250px] h-full m-2"><LazyLoadImage src="https://backend.tkti.uz/uploads/file-1681043403804.png"  /></div>
+            <div className="  w-[250px] h-full m-2"><LazyLoadImage src="https://backend.tkti.uz/uploads/file-1681043430632.png"  /></div>
               
      
       </div>
       <div
-        className="container-fluid     "
+        className="container-fluid   "
         style={{
           width:"100vw",
           height:"90vh",
          
           position: "relative",
-          // backgroundAttachment: "fixed",
+         
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
@@ -43,7 +48,7 @@ export const Products = () => {
       >
         {isModal && (
         <div
-          className="absolute top-0 left-0 h-full w-full backdrop-blur-sm z-50 p-10 flex justify-center items-center"
+          className=" absolute top-0 left-0 h-full w-full backdrop-blur-sm z-50 p-10 flex justify-center items-center"
           onClick={() => setIsModal(false)}
         >
           <div
@@ -101,6 +106,7 @@ export const Products = () => {
         <div className="justify-between items-center flex flex-wrap mx-auto   my-2 ">
 
      
+
         {[1, 2, 3, 4].map((item) => (
           <div
             key={item}
@@ -127,6 +133,6 @@ export const Products = () => {
       </div>
 
       
-    </>
+    </div>
   );
 };
