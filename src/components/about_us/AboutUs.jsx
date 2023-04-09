@@ -1,9 +1,11 @@
 import React from "react";
-
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 import { useAppContext } from "../../context/app.contex";
 import tringle from "../../assets/images/tringle.png"
 
 export const AboutUs = () => {
+  const {t} = useTranslation();
   const { colors } = useAppContext();
 
   return (
@@ -34,18 +36,14 @@ export const AboutUs = () => {
          
           <div className="mx-5">
             <p className={`${colors.lightTextColor2} text-xl mb-8`}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint
-              magnam accusantium deleniti debitis minus aspernatur est quis
-              quaerat iure unde.
+             
             </p>
 
             <p className={`${colors.lightTextColor2} text-xl mb-8`}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint
-              magnam accusantium deleniti debitis minus aspernatur est quis
-              quaerat iure unde.
+            {t("about.title")}
             </p>
             <ul className="mb-6">
-              {[1, 2, 3, 4,5].map((item) => (
+              {[1, 2].map((item) => (
                 <li
                   key={item}
                   className={`${colors.lightTextColor2} font-semibold mb-3 flex items-center`}

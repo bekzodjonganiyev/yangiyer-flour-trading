@@ -22,22 +22,22 @@ export const Footer = () => {
     <footer className={`bg-[#fff9e9] mt-[100px] py-5 ${colors.lightBgColor3}`}>
       <div className="container-fluid w-[90%]  ">
         <div className="lg:flex md:flex container-fluid mx-auto   my-2   flex flex-wrap   gap-4 items-end justify-between">
-        <div className=" w-[300px] mx-auto m-2  h-[200px] ">
+        <div className=" w-[350px] mx-auto m-2  h-[200px] ">
           <Link to="/">
             <div className="flex items-center ">
               <img src={logo} alt="Main logo" className="w-30 h-24" />
               <p className={`${colors.lightTextColor2} lg:text-2xl xl:text-xl md:text-lg md:w-1/2 font-bold`}>
-                YANGIYER FLOUR <br />
+                 {t("Header.name")}<br />
                 <span className={`${colors.lightTextColor3} ml-1`}>
-                  TRADING
+                {t("Header.name2")}
                 </span>
               </p>
         
             </div>
             <div>
               <p className="text-sky-900 mb-2  lg:text-xl xl:text-sm">
-                Address: Republic of Uzbekistan, Sirdaryo region, Yangiyer city,
-                industrial area
+              {t("footer.name")}
+                
               </p>
             </div>
             <div className="icons">
@@ -62,37 +62,34 @@ export const Footer = () => {
             </div>
           </Link>
         </div>
-        <div className={`w-[250px] mx-auto m-2  h-[200px] items-center justify-between ${colors.lightTextColor2} font-bold xl:text-base `}
+        <div className={`w-[250px] mx-auto mt-[20px]  h-[200px] items-center justify-between ${colors.lightTextColor2} font-bold xl:text-base `}
         >
-          <h3 className="text-2xl my-3 mx-auto">Quick Links</h3>
+          
           <NavLink className={`flex items-center my-2 mx-2`} to="about-us">
             <LeftIcon />
-            <span className="mx-3">About Us</span>{" "}
+            <span className="mx-3">{t("Header.about")}</span>{" "}
           </NavLink>
           <NavLink className={`flex items-center my-2 mx-2`} to="products">
             {" "}
             <LeftIcon />
-            <span className="mx-3">Products</span>{" "}
+            <span className="mx-3">{t("Header.product")}</span>{" "}
           </NavLink>
-          <NavLink className={`flex items-center my-2 mx-2`} to="lidership">
-            <LeftIcon />
-            <span className="mx-3">Lidership</span>
-          </NavLink>
+         
           <NavLink className={`flex items-center my-2 mx-2`} to="partners">
             {" "}
             <LeftIcon />
-            <span className="mx-3">Partners</span>
+            <span className="mx-3">{t("Header.partners")}</span>
           </NavLink>
           <a href={"#"} className={`flex items-center my-2 mx-2`}>
             {" "}
             <LeftIcon />
-            <span className="mx-3">Contact Us</span>
+            <span className="mx-3">{t("Header.ContactUs")}</span>
           </a>
         </div>
 
-        <div className={`w-[300px] mx-auto m-2  h-[200px] items-center justify-between ${colors.lightTextColor2} font-bold  `}
+        <div className={`w-[300px] mx-auto mt-5  h-[200px] items-center justify-between ${colors.lightTextColor2} font-bold  `}
         >
-          <h3 className="text-2xl my-2">Contacts</h3>
+         
           <div className={`flex items-center `}>
             <a
               href="#"

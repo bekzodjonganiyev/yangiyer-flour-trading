@@ -7,7 +7,7 @@ import { Gallary } from "../../components/gallary/Gallary";
 import { LidershipCard } from "../../components/lidership_card/LidershipCard";
 import { Products } from "../../components/products";
 import { Carusel } from "../../components/slider";
-import { Statistics } from "../../components/statistics/Statistics";
+
 import { Partners } from '../../components/partners'
 import {ContactUs} from '../contact_us/ContactUs'
 
@@ -42,7 +42,7 @@ export const Home = () => {
         </div>
       </div> */}
      
-      <Statistics />
+    
       <Gallary />
       <Partners />
       <ContactUs />
