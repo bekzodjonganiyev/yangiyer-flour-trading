@@ -12,6 +12,7 @@ import { Partners } from '../../components/partners'
 import {ContactUs} from '../contact_us/ContactUs'
 
 import { useAppContext } from "../../context/app.contex";
+import BannerVideo from "../../components/bannerVideo/BannerVideo";
 
 export const Home = () => {
   console.log("Home");
@@ -19,7 +20,7 @@ export const Home = () => {
 
   return (
     <div>
-      <Carusel />
+     <BannerVideo />
       <AboutUs />
       <Products />
       {/* <div className="my-10">

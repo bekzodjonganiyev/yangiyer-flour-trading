@@ -10,11 +10,7 @@ export const MainHeader = () => {
   const {t} = useTranslation();
   const [isOpen, setOpen] = useState({ hamburger: false, lang: false });
   const language = [
-    {
-      code: "en",
-      name: "En",
-      conuntry_code: "gb",
-    },
+   
     {
       code: "uz",
       name: "Uz",
@@ -24,6 +20,16 @@ export const MainHeader = () => {
       code: "ru",
       name: "Ru",
       conuntry_code: "ru",
+    },
+    {
+      code: "en",
+      name: "En",
+      conuntry_code: "gb",
+    },
+    {
+      code: "ar",
+      name: "Ar",
+      conuntry_code: "ar",
     },
   ]
   const toggleHamburger = () => {
@@ -41,7 +47,7 @@ export const MainHeader = () => {
       className={`${colors.lightBgColor3} shadow w-full  sticky top-0 z-50 lg:flex justify-between`}
     >
       <div className="flex items-center justify-between container mx-auto w-[90%]">
-        <div className="w-1/3 md:w-2/3  sm:min-w-[400px]">
+        <div className="">
         <Link to="/">
           <div className="flex items-center ">
             <img src={logo} alt="Main logo" className="w-30 h-24" />
@@ -53,17 +59,17 @@ export const MainHeader = () => {
         </Link>
         </div>
         <div
-          className={`w-1/2 xl:flex   justify-between ${
+          className={` xl:flex   justify-between ${
             isOpen.hamburger
               ? "xl:static absolute top-0 left-0 max-xl:w-full max-xl:h-screen xl:bg-inherit bg-[rgba(0,0,0,0.96)] max-xl:flex max-xl:flex-col max-xl:justify-start max-xl:pt-24"
               : "hidden"
           } ${colors.lightTextColor2} font-bold`}
         >
-          <NavLink to="about-us"  className="max-xl:pl-14 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8">            {t("Header.about")} </NavLink>
-          <NavLink to="products"  className="max-xl:pl-14 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8"  onClick={() => toggleHamburger()}>{t("Header.product")}</NavLink>
+          <NavLink to="about-us"  className="max-xl:pl-14 mx-5 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8">            {t("Header.about")} </NavLink>
+          <NavLink to="products"  className="max-xl:pl-14 mx-5 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8"  onClick={() => toggleHamburger()}>{t("Header.product")}</NavLink>
 
-          <NavLink to="partners"  className="max-xl:pl-14 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8"  onClick={() => toggleHamburger()}>{t("Header.partners")}</NavLink>
-          <NavLink to="contact-us"  className="max-xl:pl-14 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8"  onClick={() => toggleHamburger()}>{t("Header.ContactUs")}</NavLink>
+          <NavLink to="partners"  className="max-xl:pl-14 mx-5 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8"  onClick={() => toggleHamburger()}>{t("Header.partners")}</NavLink>
+          <NavLink to="contact-us"  className="max-xl:pl-14 mx-5 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8"  onClick={() => toggleHamburger()}>{t("Header.ContactUs")}</NavLink>
 
           
          
@@ -85,7 +91,7 @@ export const MainHeader = () => {
             ))}
           </div>
         </div>
-        <div className="w-2/6 flex items-center justify-end gap-3">
+        <div className=" flex items-center justify-end gap-3">
          
           <div
             className="items-center gap-3  text-black bg-[#F2F2F2] ml-10 p-2.5 rounded cursor-pointer xl:flex hidden relative"

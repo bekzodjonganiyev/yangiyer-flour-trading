@@ -10,24 +10,29 @@ export const TopHeader = () => {
   const [socials, setSocials] = useState(localStorage.getItem("socials") || {})
   
   return (
+    <>
+   
+  
+
     <div
-      className={`container-fluid  ${colors.lightBgColor1} ${colors.lightTextColor1}`}
+      className={`container-fluid py-5  ${colors.lightBgColor1} ${colors.lightTextColor1}`}
     >
-      <div className="py-4 container mx-auto w-[90%] flex items-center justify-between">
+      <div className="flex  justify-between items-center max-xl:flex-col ">
         {/* Social networks */}
-        <div className="items-center lg:flex sm:block grid-span-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 justify-center  md:my-3 sm:my-2  ">
-          <a href="# " className="mx-2"><FacebookIcon color="#000" /></a>
-          <a href="#" className="mx-2"><TelegramIcon color="#000" /></a>
-          <a href="#" className="mx-2"><InstagramIcon color="#000" /></a>
-          <a href="#" className="mx-2"><YouTubeIcon color="#000" /></a>
+        <div className="items-center flex  justify-center mx-5  ">
+          <a href="# " className="mx-2"><FacebookIcon color="#082A58" /></a>
+          <a href="#" className="mx-2"><TelegramIcon color="#082A58" /></a>
+          <a href="#" className="mx-2"><InstagramIcon color="#082A58" /></a>
+          <a href="#" className="mx-2"><YouTubeIcon color="#082A58" /></a>
         </div>
 
-        <div className="lg:flex md:flex justify-between lg:w-9/12 md-w-full sm:w-full">
-          <p className="font-semibold lg:text-lg md:text-base  sm:text-xs  ">{t("navHeader.call")}:{" "} <span className={`font-semibold ${colors.darkTextColor1}`}>+8998898989</span></p>
-          <p className="font-semibold lg:text-lg md:text-base sm:text-xs  ">{t("navHeader.Email")}:{" "} <span className={`font-semibold ${colors.darkTextColor1}`}>info@ytf.uz</span></p>
-          <p className="font-semibold lg:text-lg md:text-base sm:text-xs ">{t("navHeader.Openouse")}:{" "} <span className={`font-semibold ${colors.darkTextColor1}`}>Mon-Fri: 9 am - 6 am</span></p>
+        <div className="flex justify-between w-full mx-10">
+          <div className="lg:flex   font-semibold lg:text-lg   "><p className="mx-2">{t("navHeader.call")}:</p> <p className={`font-semibold mx-2  ${colors.lightTextColor2}`}>+8998898989</p></div>
+          <div className="lg:flex  font-semibold lg:text-lg   "><p className="mx-2">{t("navHeader.Email")}:</p> <p className={`font-semibold mx-2 ${colors.lightTextColor2}`}>info@ytf.uz</p></div>
+          <div className="lg:flex font-semibold lg:text-lg  "><p className="mx-2">{t("navHeader.Openouse")}:</p> <p className={`font-semibold mx-2 ${colors.lightTextColor2}`}>Mon-Fri: 9 am - 6 am</p></div>
         </div>
       </div>
     </div>
+    </>
   );
 };

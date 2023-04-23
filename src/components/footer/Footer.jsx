@@ -19,14 +19,14 @@ export const Footer = () => {
     <>
      
   
-    <footer className={`bg-[#fff9e9] mt-[100px] py-5 ${colors.lightBgColor3}`}>
+    <footer className={` mt-[20px] py-5 ${colors.darkBgColor3}`}>
       <div className="container-fluid w-[90%]  ">
         <div className="lg:flex md:flex container-fluid mx-auto   my-2   flex flex-wrap   gap-4 items-end justify-between">
         <div className=" w-[350px] mx-auto m-2  h-[200px] ">
           <Link to="/">
             <div className="flex items-center ">
               <img src={logo} alt="Main logo" className="w-30 h-24" />
-              <p className={`${colors.lightTextColor2} lg:text-2xl xl:text-xl md:text-lg md:w-1/2 font-bold`}>
+              <p className={`text-white lg:text-2xl xl:text-xl md:text-lg md:w-1/2 font-bold`}>
                  {t("Header.name")}<br />
                 <span className={`${colors.lightTextColor3} ml-1`}>
                 {t("Header.name2")}
@@ -35,7 +35,7 @@ export const Footer = () => {
         
             </div>
             <div>
-              <p className="text-sky-900 mb-2  lg:text-xl xl:text-sm">
+              <p className="text-white mb-2  lg:text-xl xl:text-sm">
               {t("footer.name")}
                 
               </p>
@@ -46,23 +46,23 @@ export const Footer = () => {
                   {" "}
                   <FacebookIcon
                     className={`flex items-center justify-center mx-auto`}
-                    color="#000"
+                    color="#082A58"
                   />
                 </a>
                 <a href="#" className="w-[40px] bg-amber-500 p-2">
-                  <TelegramIcon color="#000" />
+                  <TelegramIcon color="#082A58" />
                 </a>
                 <a href="#" className="w-[40px] bg-amber-500 p-2">
-                  <InstagramIcon color="#000" />
+                  <InstagramIcon color="#082A58"/>
                 </a>
                 <a href="#" className="w-[40px] bg-amber-500 p-2">
-                  <YouTubeIcon color="#000" />
+                  <YouTubeIcon color="#082A58" />
                 </a>
               </div>
             </div>
           </Link>
         </div>
-        <div className={`w-[250px] mx-auto mt-[20px]  h-[200px] items-center justify-between ${colors.lightTextColor2} font-bold xl:text-base `}
+        <div className={`w-[250px] mx-auto mt-[20px]  h-[200px] items-center justify-between text-white font-bold xl:text-base `}
         >
           
           <NavLink className={`flex items-center my-2 mx-2`} to="about-us">
@@ -87,7 +87,7 @@ export const Footer = () => {
           </a>
         </div>
 
-        <div className={`w-[300px] mx-auto mt-5  h-[200px] items-center justify-between ${colors.lightTextColor2} font-bold  `}
+        <div className={`w-[300px] mx-auto mt-5  h-[200px] items-center justify-between text-white font-bold  `}
         >
          
           <div className={`flex items-center `}>
@@ -128,12 +128,13 @@ export const Footer = () => {
         </div>
         <div className=" w-[200px] mx-auto m-2  h-[200px]">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11984.900307199561!2d69.23442929282095!3d41.325718815889005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b737f1f4161%3A0xab6842dfd7a53fdf!2sToshkent%20kimyo-texnologiya%20instituti!5e0!3m2!1suz!2s!4v1652868919695!5m2!1suz!2s"
+            src="https://goo.gl/maps/WjsLAMhVU4xqUrPp7"
             allowFullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             className="rounded-xl h-56 w-80"
           ></iframe>
+          
         </div>
         </div>
       </div>
