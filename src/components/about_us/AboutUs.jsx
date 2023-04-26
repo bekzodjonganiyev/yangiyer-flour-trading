@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { useAppContext } from "../../context/app.contex";
-
+import './About.css'
 
 export const AboutUs = () => {
   const {t} = useTranslation();
@@ -13,7 +13,7 @@ export const AboutUs = () => {
   return (
     <>
    
-     <div className="container-fluid mx-auto  w-[100%] ">
+     <div className="container-fluid mx-auto  w-[100%] my-[100px]">
     
      <div className="w-[95%] mx-auto  mt-[100px] mb-[70px] ">
   <h2 className={`${colors.lightTextColor2} text-center text-4xl font-bold my-4 `}>
@@ -37,7 +37,7 @@ export const AboutUs = () => {
           width:"100vw",
           height:"50vh",
         
-          position: "relative",
+        
           borderRadius:"10px",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
@@ -47,12 +47,12 @@ export const AboutUs = () => {
       >
         {isModal && (
         <div
-          className=" w-[100vw] absolute top-[-200px]  h-full   backdrop-blur-sm z-50 py-[500px] px-[100px] flex justify-center items-center "
+         className="mx-auto w-screen h-screen absolute top-0 right-0 backdrop-blur-sm z-50 flex items-center justify-center"
           onClick={() => setIsModal(false)}
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative  w-[100vw] mx-auto shadow-2xl z-20  "
+            className="w-2/3 relative bg-black"
             onMouseEnter={() => {
               setVisible(true);
               console.log("enter");
@@ -62,15 +62,14 @@ export const AboutUs = () => {
               console.log("leave");
             }}
           >
-            {visible &
-            (
-              <button
-                className="absolute top-20 right-10  p-10 z-[9999]"
-                onClick={() => setIsModal(true)}
-              >
-                kjhgkhgkj
-              </button>
-            )}
+           {visible && (
+                  <button
+                    className="bg-red-600 w-16 h-16 absolute right-2 top-2 z-50 text-white font-bold text-xl rounded-full"
+                    onClick={() => setIsModal(false)}
+                  >
+                    X
+                  </button>
+                )}
             <iframe  width="100%" height="506" src="https://www.youtube.com/embed/G0zm9TybxpU" title="Firma uchun video" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
         </div>

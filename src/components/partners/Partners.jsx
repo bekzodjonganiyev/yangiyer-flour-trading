@@ -1,12 +1,14 @@
 import React from "react";
 import Slider from "react-slick";
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 import "./Partners.css"
 
 
 import { useAppContext } from "../../context/app.contex";
 
 export const Partners = () => {
-
+  const { t } = useTranslation();
   const { colors } = useAppContext();
 
   const images = [
@@ -60,7 +62,7 @@ export const Partners = () => {
       <h1
         className={`${colors.lightTextColor2} text-3xl font-bold text-center mb-10`}
       >
-        Partners
+         {t("Header.partners")}
       </h1>
       <div
         className="h-96 flex justify-center items-center"

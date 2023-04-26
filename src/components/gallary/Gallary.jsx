@@ -2,6 +2,8 @@ import { useState } from "react";
 import PhotoAlbum from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 // optional lightbox plugins
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
@@ -66,14 +68,15 @@ const slides = photos.map(({ src, width, height, images }) => ({
 }));
 
 export const Gallary = () => {
+  const { t } = useTranslation();
   const [index, setIndex] = useState(-1);
   const { colors } = useAppContext();
   return (
-    <div className="my-10">
+    <div className="my-14">
       <h1
-        className={`${colors.lightTextColor2} text-3xl font-bold text-center mb-10`}
+        className={`${colors.lightTextColor2} text-4xl font-bold text-center mb-16`}
       >
-        Gallary
+        {t("Header.Gallary")}
       </h1>
 
       <PhotoAlbum

@@ -27,8 +27,8 @@ export const TopHeader = () => {
         </div>
 
         <div className="flex justify-between w-full mx-10">
-          <div className="lg:flex   font-semibold lg:text-lg   "><p className="mx-2">{t("navHeader.call")}:</p> <a  target="_blank" href="tel:+8998898989" className={`font-semibold mx-2  ${colors.lightTextColor2}`}>+8998898989</a></div>
-          <div className="lg:flex  font-semibold lg:text-lg   "><p className="mx-2">{t("navHeader.Email")}:</p> <a target="_blank" href="mailto:info@ytf.uz" className={`font-semibold mx-2 ${colors.lightTextColor2}`}>info@ytf.uz</a></div>
+          <div className="lg:flex   font-semibold lg:text-lg   "><p className="mx-2">{t("navHeader.call")}:</p> <a  target="_blank" href="tel:909795055" className={`font-semibold mx-2  ${colors.lightTextColor2}`}>+998909795055</a></div>
+          <div className="lg:flex  font-semibold lg:text-lg   "><p className="mx-2">{t("navHeader.Email")}:</p> <a target="_blank" href="mailto:info@ytf.uz" className={`font-semibold mx-2 ${colors.lightTextColor2}`}>info@yangiyerflourtraiding.uz</a></div>
           <div className="lg:flex font-semibold lg:text-lg  "><p className="mx-2">{t("navHeader.Openouse")}:</p> <p className={`font-semibold mx-2 ${colors.lightTextColor2}`}>Mon-Fri: 9 am - 6 am</p></div>
         </div>
       </div>
