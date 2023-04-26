@@ -13,7 +13,7 @@ export const AboutUs = () => {
   return (
     <>
    
-     <div className="container-fluid mx-auto  w-[100%]  ">
+     <div className="container-fluid mx-auto  w-[100%] ">
     
      <div className="w-[95%] mx-auto  mt-[100px] mb-[70px] ">
   <h2 className={`${colors.lightTextColor2} text-center text-4xl font-bold my-4 `}>

@@ -10,11 +10,11 @@ export const Products = () => {
   const { colors } = useAppContext();
 
   const images = [
-    {src: 'https://backend.tkti.uz/uploads/file-1682426863726.jpg', alt: 'Image 1'},
-    {src: 'https://backend.tkti.uz/uploads/file-1682426125801.png', alt: 'Image 2'},
-    {src: 'https://backend.tkti.uz/uploads/file-1682426154638.png', alt: 'Image 3'},
-    {src: 'https://backend.tkti.uz/uploads/file-1682426104953.png', alt: 'Image 1'},
-  
+    {src: 'https://backend.tkti.uz/uploads/file-1682481964422.jpg', alt: 'Image 1'},
+    {src: 'https://backend.tkti.uz/uploads/file-1682482834618.png', alt: 'Image 3'},
+    {src: 'https://backend.tkti.uz/uploads/file-1682482673320.png', alt: 'Image 2'},
+    {src: 'https://backend.tkti.uz/uploads/file-1682482235036.jpg', alt: 'Image 1'},
+    
   ]
   const settings = {
     dots: true,
