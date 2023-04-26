@@ -11,8 +11,8 @@ export const ContactUs = () => {
   const [isModal, setIsModal] = useState(false);
   const [visible, setVisible] = useState(false);
   return (
-    <div>
-      <div className="container mx-auto w-[90%] flex lg:flex-row flex-col  max-md:flex-col ">
+    <div className="bg-white">
+      <div className="container mx-auto w-[90%] flex lg:flex-row flex-col  max-md:flex-col  ">
       <div className="container ">
     <img className="w-[100%]" src={ContactImg} alt="" />
    </div>

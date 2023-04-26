@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 
 import { UserLayout} from './components/layouts'
 import { Loader } from './components/loader/Loader'
-// import { ContactUs } from './pages/contact_us/ContactUs'
+import SkeletonPost from './components/skeleton_loader/SkeletonPost'
 import { lazyImport, importDelay } from './utils/lazyImportFuntion'
 
 const Home = lazy(() => importDelay(import("./pages/home").then((module) => ({default: module.Home}))))
@@ -19,11 +19,11 @@ export const App = () => {
       <Routes>
         <Route path='/' element={<Suspense fallback={<Loader />}><UserLayout /></Suspense>}>
           <Route index element={<Home />}/>
-          <Route path='about-us' element={<AboutUs />}/>
-          <Route path='products' element={<ProductsPage />}/>
-          <Route path='lidership'  element={<Lidership />}/>
-          <Route path='partners'  element={<Partners />}/>
-          <Route path='contact-us'  element={<ContactUs />}/>
+          <Route path={`:lang/about-us`} element={<AboutUs  />}/>
+          <Route path={`:lang/products`} element={<ProductsPage />}/>
+          <Route path={`:lang/lidership`} element={<Lidership />}/>
+          <Route path={`:lang/partners`}  element={<Partners />}/>
+          <Route path={`:lang/contact-us`} element={<ContactUs />}/>
         </Route>
       </Routes>
     </div>

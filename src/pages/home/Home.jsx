@@ -1,10 +1,9 @@
 import React from "react";
 
-import fakeVerstka2 from "../../assets/images/fake_verstka2.png"
 
 import { AboutUs } from "../../components/about_us";
 import { Gallary } from "../../components/gallary/Gallary";
-import { LidershipCard } from "../../components/lidership_card/LidershipCard";
+
 import { Products } from "../../components/products";
 import { Carusel } from "../../components/slider";
 

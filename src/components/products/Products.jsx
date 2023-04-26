@@ -3,16 +3,17 @@ import Slider from "react-slick";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 
-import { useState } from "react";
+import './Products.css'
+
 export const Products = () => {
   const {t} = useTranslation();
   const { colors } = useAppContext();
 
   const images = [
-    {src: 'https://backend.tkti.uz/uploads/file-1681043316631.png', alt: 'Image 1'},
-    {src: 'https://backend.tkti.uz/uploads/file-1681043362030.png', alt: 'Image 2'},
-    {src: 'https://backend.tkti.uz/uploads/file-1681043403804.png', alt: 'Image 3'},
-    {src: 'https://backend.tkti.uz/uploads/file-1681043430632.png', alt: 'Image 1'},
+    {src: 'https://backend.tkti.uz/uploads/file-1682426863726.jpg', alt: 'Image 1'},
+    {src: 'https://backend.tkti.uz/uploads/file-1682426125801.png', alt: 'Image 2'},
+    {src: 'https://backend.tkti.uz/uploads/file-1682426154638.png', alt: 'Image 3'},
+    {src: 'https://backend.tkti.uz/uploads/file-1682426104953.png', alt: 'Image 1'},
   
   ]
   const settings = {
@@ -27,7 +28,7 @@ export const Products = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 3,
           infinite: true,
           dots: true
@@ -52,22 +53,31 @@ export const Products = () => {
   };
 
   return (
-    <div className="container-fluid w-[100vw]  bg-[#082A58]">
+    <div className="container-fluid w-[100vw] ">
       <div className="mt-[50px]">
       <h2 className={`${colors.lightTextColor2} text-center text-3xl font-bold mb-4`}>
             Yangiyer flour{" "}
             <span className={`${colors.lightTextColor3}`}>trading brends</span>
           </h2>
           </div>
-          <p className="text-center text-xl mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi eligendi dolorem, nemo ex eum ipsum repellat dignissimos iusto iure recusandae?</p>
-          <div className="container w-[80%] py-5 mx-auto">
-        <Slider {...settings}>
+         
+          <div className="container w-[80%] mx-auto">
+          <Slider {...settings}>
+
+
       {images.map(image => (
-        <div key={image.src}>
-          <img  className="w-[80%] rounded-md cursor-pointer" src={image.src} alt={image.alt} />
+        <div class="image" key={image.src}>
+				<div id="zoom-In">
+					<figure>
+          <img  className="w-[90%] rounded-md cursor-pointer" src={image.src} alt={image.alt} />
+					</figure>
+					
         </div>
+			</div>
+       
       ))}
-    </Slider>
+      </Slider>
+   
         </div>
         
       

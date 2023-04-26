@@ -52,8 +52,8 @@ export const MainHeader = () => {
           <div className="flex items-center ">
             <img src={logo} alt="Main logo" className="w-30 h-24" />
             <p className={`${colors.lightTextColor2} text-2xl font-bold`}>
-            {t("name.yangiyer")}{" "} <br />
-              <span className={`${colors.lightTextColor3} ml-10`}>{t("name.trading")}</span>
+            {t("Header.name")}{" "} <br />
+              <span className={`${colors.lightTextColor3} ml-10`}> {t("Header.name2")}</span>
             </p>
           </div>
         </Link>
@@ -63,13 +63,14 @@ export const MainHeader = () => {
             isOpen.hamburger
               ? "xl:static absolute top-0 left-0 max-xl:w-full max-xl:h-screen xl:bg-inherit bg-[rgba(0,0,0,0.96)] max-xl:flex max-xl:flex-col max-xl:justify-start max-xl:pt-24"
               : "hidden"
-          } ${colors.lightTextColor2} font-bold`}
+          } ${colors.lightTextColor2} font-bold text-[18px]`}
         >
-          <NavLink to="about-us"  className="max-xl:pl-14 mx-5 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8">            {t("Header.about")} </NavLink>
-          <NavLink to="products"  className="max-xl:pl-14 mx-5 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8"  onClick={() => toggleHamburger()}>{t("Header.product")}</NavLink>
+          <NavLink to={`${i18next.language}/about-us`}  className="max-xl:pl-14 mx-5 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8">            {t("Header.about")}  </NavLink>
 
-          <NavLink to="partners"  className="max-xl:pl-14 mx-5 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8"  onClick={() => toggleHamburger()}>{t("Header.partners")}</NavLink>
-          <NavLink to="contact-us"  className="max-xl:pl-14 mx-5 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8"  onClick={() => toggleHamburger()}>{t("Header.ContactUs")}</NavLink>
+          <NavLink to={`${i18next.language}/products`}  className="max-xl:pl-14 mx-5 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8"  onClick={() => toggleHamburger()}>{t("Header.product")}</NavLink>
+
+          <NavLink to={`${i18next.language}/partners`} className="max-xl:pl-14 mx-5 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8"  onClick={() => toggleHamburger()}>{t("Header.partners")}</NavLink>
+          <NavLink to={`${i18next.language}/contact-us`}  className="max-xl:pl-14 mx-5 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8"  onClick={() => toggleHamburger()}>{t("Header.ContactUs")}</NavLink>
 
           
          
@@ -80,7 +81,7 @@ export const MainHeader = () => {
             {language.map((item) => (
               <button 
                 key={item.code}
-                className="bg-[#F2F2F2] text-black rounded p-2"
+                className="bg-[#F2F2F2] text-black rounded p-2 text-[18px]"
                 onClick={() => {
                   changeLanguage(item.code);
                   toggleHamburger();

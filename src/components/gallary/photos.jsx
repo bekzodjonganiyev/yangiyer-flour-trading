@@ -1,9 +1,13 @@
 const breakpoints = [1080, 640, 384, 256, 128, 96, 64, 48];
 
 const unsplashLink = (id, width, height) =>
-    `https://source.unsplash.com/${id}/${width}x${height}`;
+    `https://live.staticflickr.com/65535/{id}/${width}x${height}`;
 
 const unsplashPhotos = [
+    { id: "52844966468_720cfef03c_b", width: 1080, height: 780 },
+    { id: "65535/52844915350_05f40a0311_z", width: 1080, height: 1620 },
+    { id: "52844915345_8515f42854_b", width: 1080, height: 720 },
+    { id: "52844705909_1f9a6f5289_b", width: 1080, height: 721 },
     { id: "Osq7UAVxIOI", width: 1080, height: 780 },
     { id: "Dhmn6ete6g8", width: 1080, height: 1620 },
     { id: "RkBTPqPEGDo", width: 1080, height: 720 },

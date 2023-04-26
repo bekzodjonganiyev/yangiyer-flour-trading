@@ -26,7 +26,7 @@ export const Footer = () => {
           <Link to="/">
             <div className="flex items-center ">
               <img src={logo} alt="Main logo" className="w-30 h-24" />
-              <p className={`text-white lg:text-2xl xl:text-xl md:text-lg md:w-1/2 font-bold`}>
+              <p className={`text-white lg:text-2xl xl:text-xl md:text-lg md:w-[70%] font-bold`}>
                  {t("Header.name")}<br />
                 <span className={`${colors.lightTextColor3} ml-1`}>
                 {t("Header.name2")}

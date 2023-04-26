@@ -66,7 +66,6 @@ export const Partners = () => {
         className="h-96 flex justify-center items-center"
         style={{
           position: "relative",
-          // opacity: "0.65",
           backgroundAttachment: "fixed",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
@@ -74,11 +73,11 @@ export const Partners = () => {
           backgroundImage: `url("https://backend.tkti.uz/uploads/file-1680956180674.jpg")`,
         }}
       >
-        <div className="container w-[80%] mx-auto">
+        <div className="container w-[80%] mx-auto ">
         <Slider {...settings}>
       {images.map(image => (
         <div key={image.src}>
-          <img className="w-[80%]" src={image.src} alt={image.alt} />
+          <img className="w-full p-2"  src={image.src} alt={image.alt} />
         </div>
       ))}
     </Slider>
