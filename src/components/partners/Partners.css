@@ -1,4 +1,4 @@
-/* Player Icon Animation */
+
 .glightbox_video {
     position: absolute;
     top: 50%;
@@ -118,4 +118,7 @@
     }
   }
   /* Player Icon Animation */
+  /* .partners .slick-prev:before, .partners .slick-next:before{
+    display: none;
+  } */
   

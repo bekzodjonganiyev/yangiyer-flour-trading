@@ -10,14 +10,16 @@ export const Products = () => {
   const { colors } = useAppContext();
 
   const images = [
-    {src: 'https://new-tkti-back.herokuapp.com/uploads/photo-1682483616007.png', alt: 'Image 1'},
-    {src: 'https://new-tkti-back.herokuapp.com/uploads/photo-1682483597485.png', alt: 'Image 3'},
-    {src: 'https://new-tkti-back.herokuapp.com/uploads/photo-1682483580131.png', alt: 'Image 2'},
-    {src: 'https://new-tkti-back.herokuapp.com/uploads/photo-1682483561838.png', alt: 'Image 1'},
+    {src: 'https://backend.tkti.uz/uploads/file-1681043430632.png', alt: 'Image 1'},
+    {src: 'https://backend.tkti.uz/uploads/file-1681043403804.png', alt: 'Image 3'},
+    {src: 'https://backend.tkti.uz/uploads/file-1681043362030.png', alt: 'Image 2'},
+    {src: 'https://backend.tkti.uz/uploads/file-1681043316631.png', alt: 'Image 1'},
+    {src: 'https://backend.tkti.uz/uploads/file-1681043430632.png', alt: 'Image 1'},
+    {src: 'https://backend.tkti.uz/uploads/file-1681043403804.png', alt: 'Image 3'},
     
   ]
   const settings = {
-    dots: true,
+   
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -53,25 +55,32 @@ export const Products = () => {
   };
 
   return (
-    <div >
-       <div className="container w-[80%] mx-auto">
-      <h2 className={`${colors.lightTextColor2} text-center text-4xl font-bold mb-4`}>
-            Yangiyer flour{" "}
-            <span className={`${colors.lightTextColor3}`}>trading brends</span>
+    <div className="container-fluid ">
+      
+    <div className="container-fluid w-[100vw]  py-10   bg-[#F0F0F0]">
+    <div className="container w-[80%] mx-auto">
+      <h2 className={`${colors.lightTextColor2} text-center text-5xl font-bold mb-4`}>
+         Bizning mahsulotlarimiz
+            
           </h2>
           </div>
-    <div className="container-fluid w-[100vw]  py-10   bg-[#082A58]">
-     
+          <div>
+          {/* <Slider {...settings}> */}
+          {images.map(image => (
+             <img  className=" w-[100px] py-5 rounded-3xl	 cursor-pointer" src={image.src} alt={image.alt} />
+          ))}
+          {/* </Slider> */}
+          </div>
          
           <div className="container w-[80%] mx-auto">
           <Slider {...settings}>
 
 
       {images.map(image => (
-        <div class="image" key={image.src}>
-				<div id="zoom-In">
-					<figure>
-          <img  className="w-[90%] py-5 rounded-3xl	 cursor-pointer" src={image.src} alt={image.alt} />
+        <div className="image" key={image.src}>
+				<div id="zoom-In" >
+					<figure className="w-[200px] h-[full]">
+          <img  className=" w-[100px] py-5 rounded-3xl	 cursor-pointer" src={image.src} alt={image.alt} />
 					</figure>
 					
         </div>

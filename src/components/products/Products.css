@@ -20,8 +20,14 @@ figure {
 	transition: 0.3s ease-in-out;
 }
 .image #zoom-In figure:hover img {
-	transform: scale(1.1);
+	transform: scale(1.08);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.slick-prev:before, .slick-next:before{
+	margin-left: -20px !important;
+	font-size: 40px !important;
+	color:#EEAD0F !important;
 }
 
 

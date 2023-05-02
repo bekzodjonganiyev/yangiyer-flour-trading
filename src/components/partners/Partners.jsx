@@ -5,24 +5,22 @@ import i18next from "i18next";
 import "./Partners.css"
 
 
-import { useAppContext } from "../../context/app.contex";
-
 export const Partners = () => {
   const { t } = useTranslation();
-  const { colors } = useAppContext();
+
 
   const images = [
-    {src: 'https://backend.tkti.uz/uploads/file-1680953905268.jpg', alt: 'Image 1'},
-    {src: 'https://backend.tkti.uz/uploads/file-1680953888366.jpg', alt: 'Image 2'},
-    {src: 'https://backend.tkti.uz/uploads/file-1680953777534.jpg', alt: 'Image 3'},
-    {src: 'https://backend.tkti.uz/uploads/file-1680953754646.jpg', alt: 'Image 1'},
-    {src: 'https://backend.tkti.uz/uploads/file-1680953713364.jpg', alt: 'Image 2'},
-    {src: 'https://backend.tkti.uz/uploads/file-1680953240671.jpg', alt: 'Image 3'},
+    {src: 'https://tkti.uz/static/media/YI.00baa753ed5ca4fbb310.jpg', alt: 'Image 1'},
+    {src: 'https://tkti.uz/static/media/YI.00baa753ed5ca4fbb310.jpg', alt: 'Image 2'},
+    {src: 'https://tkti.uz/static/media/YI.00baa753ed5ca4fbb310.jpg', alt: 'Image 3'},
+    {src: 'https://tkti.uz/static/media/YI.00baa753ed5ca4fbb310.jpg', alt: 'Image 1'},
+    {src: 'https://tkti.uz/static/media/YI.00baa753ed5ca4fbb310.jpg', alt: 'Image 2'},
+    {src: 'https://tkti.uz/static/media/YI.00baa753ed5ca4fbb310.jpg', alt: 'Image 3'},
     
   ]
 
   const settings = {
-    dots: true,
+   
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -58,34 +56,38 @@ export const Partners = () => {
   };
   
   return (
-    <>
+    <div className="mt-[120px] mb-[60px]">
       <h1
-        className={`${colors.lightTextColor2} text-3xl font-bold text-center mb-10`}
+        className={ `text-[#082A58] text-5xl font-bold text-center my-3`}
       >
-         {t("Header.partners")}
+         Hamkorlarimiz
       </h1>
       <div
-        className="h-96 flex justify-center items-center"
-        style={{
-          position: "relative",
-          backgroundAttachment: "fixed",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundImage: `url("https://backend.tkti.uz/uploads/file-1680956180674.jpg")`,
-        }}
+        className=" flex justify-center items-center "
+       
       >
-        <div className="container w-[80%] mx-auto ">
-        <Slider {...settings}>
+        
+        <div className="partners container-fluid w-[100%] mx-auto ">
+        <Slider {...settings} >
       {images.map(image => (
-        <div key={image.src}>
-          <img className="w-full p-2"  src={image.src} alt={image.alt} />
+        <div key={image.src} className=" w-32 ">
+          <div className="bg-[#B4C5CD] m-4 w-[full] " style={{
+             borderRadius: "10px",
+             backgroundRepeat: "no-repeat",
+             backgroundPosition: "center",
+             backgroundSize: "container",
+             cursor:"pointer"
+
+          }}>
+
+          <img  className="w-[200px] p-2 flex mx-auto justify-center"  src={image.src} alt={image.alt} />
+          </div>
         </div>
       ))}
     </Slider>
         </div>
         
       </div>
-    </>
+    </div>
   );
 };
