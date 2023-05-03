@@ -76,6 +76,6 @@ export const Gallary = () => {
         close={() => setIndex(-1)}
         plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
       />
-    </>
+    </div>
   );
 };
