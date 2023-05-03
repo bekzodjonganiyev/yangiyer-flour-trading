@@ -11,6 +11,7 @@ import {ContactUs} from '../contact_us/ContactUs'
 
 import { useAppContext } from "../../context/app.contex";
 import BannerVideo from "../../components/bannerVideo/BannerVideo";
+import { Carusel } from "../../components/slider/Carusel";
 
 export const Home = () => {
   console.log("Home");
@@ -18,7 +19,8 @@ export const Home = () => {
 
   return (
     <div>
-     <BannerVideo />
+     <Carusel />
+     {/* <BannerVideo /> */}
       <AboutUs />
     
       <Products />

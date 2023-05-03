@@ -23,7 +23,7 @@ export const Carusel = () => {
     slidesToScroll: 1,
   };
   return (
-    <div className="mb-10">
+    <div className="bannerImg mb-10">
       
       <Slider
         {...settings}
