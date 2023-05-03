@@ -15,13 +15,15 @@ const ContactUs = lazy(() => importDelay(import("./pages/contact_us").then((modu
 
 export const App = () => {
   return (
-    <div className='w-screen h-screen overflow-x-hidden flex flex-col '>
+    <div  className={`w-screen h-screen overflow-x-hidden flex flex-col`}
+    // onScroll={(e) => smallActions.handleScroll(e.currentTarget.scrollTop)}
+  >
       <Routes>
         <Route path='/' element={<Suspense fallback={<Loader />}><UserLayout /></Suspense>}>
           <Route index element={<Home />}/>
           <Route path={`:lang/about-us`} element={<AboutUs  />}/>
           <Route path={`:lang/products`} element={<ProductsPage />}/>
-       
+          {/* <Route path={`:lang/actualNews`}  element={<ActualNews />}/> */}
           <Route path={`:lang/partners`}  element={<Partners />}/>
           <Route path={`:lang/contact-us`} element={<ContactUs />}/>
         </Route>
