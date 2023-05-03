@@ -2,7 +2,7 @@ import { useAppContext } from "../../context/app.contex";
 import Slider from "react-slick";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
-
+import {Carusel} from '../../components/slider/Carusel'
 import './Products.css'
 
 export const Products = () => {
@@ -64,23 +64,15 @@ export const Products = () => {
             
           </h2>
           </div>
-          <div>
-          {/* <Slider {...settings}> */}
-          {images.map(image => (
-             <img  className=" w-[100px] py-5 rounded-3xl	 cursor-pointer" src={image.src} alt={image.alt} />
-          ))}
-          {/* </Slider> */}
-          </div>
          
           <div className="container w-[80%] mx-auto">
-          <Slider {...settings}>
-
-
+  
+          <Slider {...settings} >
       {images.map(image => (
         <div className="image" key={image.src}>
 				<div id="zoom-In" >
 					<figure className="w-[200px] h-[full]">
-          <img  className=" w-[100px] py-5 rounded-3xl	 cursor-pointer" src={image.src} alt={image.alt} />
+          <img  className=" py-5 rounded-3xl	 cursor-pointer" src={image.src} alt={image.alt} />
 					</figure>
 					
         </div>
@@ -98,3 +90,4 @@ export const Products = () => {
     </div>
   );
 };
+

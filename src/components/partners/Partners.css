@@ -118,7 +118,7 @@
     }
   }
   /* Player Icon Animation */
-  /* .partners .slick-prev:before, .partners .slick-next:before{
+  .partners .slick-prev:before, .partners .slick-next:before{
     display: none;
-  } */
+  }
   
