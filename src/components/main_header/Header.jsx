@@ -1,13 +1,16 @@
 import { useContext, useState } from "react";
-import { Link,NavLink, useLocation } from "react-router-dom";
+import { Link,NavLink, useLocation, useNavigate } from "react-router-dom";
 import Hamburger from "hamburger-react";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
+
 import logo from "../../assets/images/logo.png";
 import { useAppContext } from "../../context/app.contex";
 
 export const MainHeader = () => {
   const {t} = useTranslation();
+  const { pathname } = useLocation();
+  const navigate = useNavigate()
   const [isOpen, setOpen] = useState({ hamburger: false, lang: false });
   const language = [
    
@@ -36,9 +39,13 @@ export const MainHeader = () => {
     setOpen({ hamburger: !isOpen.hamburger });
   };
  const changeLanguage = (code) => {
+  let pathnameLang = "uz"
+    if (pathname.split("/")[1] === "uz") pathnameLang = "uz"
+    if (pathname.split("/")[1] === "ru") pathnameLang = "ru"
+    if (pathname.split("/")[1] === "en") pathnameLang = "en"
+    if (pathname.split("/")[1] === "ar") pathnameLang = "ar"
+    navigate(pathname.replace(pathnameLang, code));
     i18next.changeLanguage(code);
-    window.location.reload();
-    window.location.href = `/`;
   };
   const { colors } = useAppContext();
   return (
@@ -85,6 +92,7 @@ export const MainHeader = () => {
                 onClick={() => {
                   changeLanguage(item.code);
                   toggleHamburger();
+                console.log(item.code);
                 }}
               >
                 {item.name}

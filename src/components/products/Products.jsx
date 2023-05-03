@@ -66,29 +66,35 @@ export const Products = () => {
   return (
     <div className="container-fluid w-[100vw] py-10">
       <div className=" mt-12">
-        <h2
-          className={`${colors.lightTextColor2} text-center text-4xl font-bold mb-4`}
-        >
-          Yangiyer flour
-          <span className={`${colors.lightTextColor3}`}>trading brends</span>
-        </h2>
-      </div>
+      <h2 className={`${colors.lightTextColor2} text-center text-4xl font-bold mb-4`}>
+            Yangiyer flour{" "}
+            <span className={`${colors.lightTextColor3}`}>trading brends</span>
+          </h2>
+          </div>
+         
+          <div className="container w-[80%] mx-auto">
+          <Slider {...settings}>
 
-      <div className="container w-[80%] mx-auto">
-        <Slider {...settings}>
-          {images.map((image) => (
-            <div className="image" key={image.src}>
-              <div id="zoom-In flex">
-                <img
-                  className="w-[90%] py-5 rounded-md cursor-pointer"
-                  src={image.src}
-                  alt={image.alt}
-                />
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
+
+      {images.map(image => (
+        <div class="image" key={image.src}>
+				<div id="zoom-In">
+					<figure>
+          <img  className="w-[90%] py-5 rounded-md cursor-pointer" src={image.src} alt={image.alt} />
+					</figure>
+					
+        </div>
+			</div>
+       
+      ))}
+      </Slider>
+   
+        </div>
+        
+      
+
+      
+    </div>
     </div>
   );
 };

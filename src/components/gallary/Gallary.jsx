@@ -4,6 +4,8 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
 // import optional lightbox plugins
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
@@ -43,14 +45,21 @@ export const Gallary = () => {
     })),
   }));
 
+  const { t } = useTranslation();
   useEffect(() => {
     smallActions.getPhotos("photo/all");
   }, []);
   return (
-    <>
+    <div className="my-14">
+      <h1
+        className={`${colors.lightTextColor2} text-4xl font-bold text-center mb-16`}
+      >
+        {t("Header.Gallary")}
+      </h1>
+
       <PhotoAlbum
-        photos={images}
-        layout="columns"
+        photos={photos}
+        layout="rows"
         targetRowHeight={300}
         onClick={({ index }) => setIndex(index)}
         columns={(containerWidth) => {
