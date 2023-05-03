@@ -129,9 +129,9 @@ export const Footer = () => {
         <div className=" w-[200px] mx-auto m-2  h-[200px]">
           <iframe
             src="https://goo.gl/maps/WjsLAMhVU4xqUrPp7"
-            allowFullscreen=""
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
             className="rounded-xl h-56 w-80"
           ></iframe>
           

@@ -34,10 +34,6 @@ export const AboutUs = () => {
      <div
         className="container-fluid rounded-md  "
         style={{
-          width:"100vw",
-          height:"50vh",
-        
-          position: "relative",
           borderRadius:"10px",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",

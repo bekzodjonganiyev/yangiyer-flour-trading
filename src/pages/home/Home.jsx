@@ -1,14 +1,11 @@
 import React from "react";
 
-
 import { AboutUs } from "../../components/about_us";
 import { Gallary } from "../../components/gallary/Gallary";
 
 import { Products } from "../../components/products";
-import { Carusel } from "../../components/slider";
-
-import { Partners } from '../../components/partners'
-import {ContactUs} from '../contact_us/ContactUs'
+import { Partners } from "../../components/partners";
+import { ContactUs } from "../contact_us/ContactUs";
 
 import { useAppContext } from "../../context/app.contex";
 import BannerVideo from "../../components/bannerVideo/BannerVideo";
@@ -19,7 +16,7 @@ export const Home = () => {
 
   return (
     <div>
-     <BannerVideo />
+      <BannerVideo />
       <AboutUs />
       <Products />
       {/* <div className="my-10">
@@ -41,8 +38,7 @@ export const Home = () => {
           </div>
         </div>
       </div> */}
-     
-    
+
       <Gallary />
       <Partners />
       <ContactUs />
