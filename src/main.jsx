@@ -5,15 +5,12 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 
 import { App } from "./App";
-import AppContextProvider from "./context/app.contex";
+import "./i18next";
 
-import './i18next'
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-      <AppContextProvider>
-        <App />
-      </AppContextProvider>
+      <App />
     </BrowserRouter>
   </React.StrictMode>
 );
