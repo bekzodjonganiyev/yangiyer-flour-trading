@@ -5,8 +5,7 @@ import { UsersContext, ScrollContext } from "./context";
 export let newsActions = null;
 export let smallActions = null;
 export let userActions = null;
-export const baseUrl = "http://localhost:5000/api";
-export const imgPrefix = "http://localhost:5000/";
+export const baseUrl = "https://new-tkti-back.herokuapp.com";
 
 export const UsersProvider = ({ children }) => {
   // Scroll value handled here
@@ -18,7 +17,7 @@ export const UsersProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
   const [media, setMedia] = useState([]);
   const [banner, setBanner] = useState([]);
-  const [application, setApplication] = useState([]);
+  const [photos, setPhotos] = useState([]);
 
   // Action states for UI
   const [isLoading, setIsLoading] = useState(false);
@@ -178,14 +177,14 @@ export const UsersProvider = ({ children }) => {
     // About Banner
 
     // About Photo News
-    getApplication: async (url) => {
+    getPhotos: async (url) => {
       setIsLoading(true);
       const data = (
         await fetch(`${baseUrl}/${url}`, { headers: config })
       ).json();
       data.then((res) => {
         if (res.success) {
-          setApplication(res.data)
+          setPhotos(res.data)
           setIsLoading(false);
         } else {
           setError(true);
@@ -480,7 +479,7 @@ export const UsersProvider = ({ children }) => {
         users,
         media,
         banner,
-        application
+        photos
       }}
     >
       {children}

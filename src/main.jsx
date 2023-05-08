@@ -6,11 +6,14 @@ import "./index.css";
 
 import { App } from "./App";
 import "./i18next";
+import { UsersProvider } from "./context";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <UsersProvider>
+        <App />
+      </UsersProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
