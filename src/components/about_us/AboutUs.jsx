@@ -9,7 +9,7 @@ export const AboutUs = () => {
   return (
     <div className="flex justify-between gap-10 container mx-auto w-[90%] mb-20">
       <div className="w-1/2">
-        <h1 className="text-secondary_color text-5xl font-bold mb-10">
+        <h1 className="text-secondary_color text-4xl font-bold mb-10">
           Biz haqimizda
         </h1>
         <p className="text-secondary_color text-xl">

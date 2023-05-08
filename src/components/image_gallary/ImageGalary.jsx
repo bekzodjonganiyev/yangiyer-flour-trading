@@ -12,7 +12,6 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 // import photos from "./photos";
 import { UsersContext, smallActions, baseUrl } from "../../context";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
 import { LeftArrow } from "../../assets/icons";
 
@@ -47,18 +46,20 @@ export const ImageGallary = () => {
   useEffect(() => {
     smallActions.getPhotos("photo/all");
   }, []);
-  console.log(photos);
   return (
     <div className="mb-20 container w-[90%] mx-auto">
       <div className="flex justify-between items-center mb-8  ">
-        <h1 className="text-secondary_color text-5xl font-bold">
+        <h1 className="text-secondary_color text-4xl font-bold">
           Fotogaleriya
         </h1>
         <Link
-          to={"#"}
+          to={"photos"}
           className="bg-primary_color py-2 px-6 rounded-md text-white flex items-center gap-2"
         >
-          Barchasi <span><LeftArrow /></span>
+          Barchasi{" "}
+          <span>
+            <LeftArrow />
+          </span>
         </Link>
       </div>
       <PhotoAlbum

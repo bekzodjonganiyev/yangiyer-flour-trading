@@ -9,12 +9,11 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import { UsersContext, smallActions, baseUrl } from "../../context";
 import { HeroIcon } from "../../assets/icons";
 
-const Hero = () => {
+export const Hero = () => {
   const { banner } = useContext(UsersContext);
   useEffect(() => {
     smallActions.getBanner("banner/get/all");
   }, []);
-  console.log(banner)
 
   const settings = {
     infinite: true,
@@ -52,6 +51,7 @@ const Hero = () => {
               alt={item.title}
               effect={"blur"}
               className="w-full img-lazy opacity-5"
+              placeholder={<h1>Loading</h1>}
               width={"100%"}
               height={"100%"}
             />
@@ -100,4 +100,3 @@ const Hero = () => {
   );
 };
 
-export default Hero;

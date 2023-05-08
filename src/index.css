@@ -43,12 +43,15 @@ input[type="number"] {
 }
 /* For Navbar */
 
+.slick-arrow::before{
+  display: none !important;
+}
+
+.slick-prev{
+  z-index: 1
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-  html {
-    font-family: Public Sans, system-ui, sans-serif;
-  }
-}

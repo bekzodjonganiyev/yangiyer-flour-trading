@@ -612,6 +612,69 @@ const LeftArrow = () => (
     </g>
   </svg>
 );
+
+const RigthChevron = () => (
+  <svg
+    width="32"
+    height="32"
+    viewBox="0 0 32 32"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <mask
+      id="mask0_19_81"
+      style={{ maskType: "alpha" }}
+      maskUnits="userSpaceOnUse"
+      x="0"
+      y="0"
+      width="32"
+      height="32"
+    >
+      <rect
+        x="32"
+        y="32"
+        width="32"
+        height="32"
+        transform="rotate(-180 32 32)"
+        fill="#EEAD0F"
+      />
+    </mask>
+    <g mask="url(#mask0_19_81)">
+      <path
+        d="M10.6667 2.66683L24 16.0002L10.6667 29.3335L8.3 26.9668L19.2667 16.0002L8.3 5.0335L10.6667 2.66683Z"
+        fill="white"
+      />
+    </g>
+  </svg>
+);
+
+const LeftChevron = () => (
+  <svg
+    width="32"
+    height="32"
+    viewBox="0 0 32 32"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <mask
+      id="mask0_19_75"
+      style={{ maskType: "alpha" }}
+      maskUnits="userSpaceOnUse"
+      x="0"
+      y="0"
+      width="32"
+      height="32"
+    >
+      <rect width="32" height="32" fill="#EEAD0F" />
+    </mask>
+    <g mask="url(#mask0_19_75)">
+      <path
+        d="M21.3333 29.3332L8 15.9998L21.3333 2.6665L23.7 5.03317L12.7333 15.9998L23.7 26.9665L21.3333 29.3332Z"
+        fill="white"
+      />
+    </g>
+  </svg>
+);
 export {
   MainLogo,
   Global,
@@ -637,5 +700,7 @@ export {
   Twitter,
   Pdf,
   HeroIcon,
-  LeftArrow
+  LeftArrow,
+  LeftChevron,
+  RigthChevron,
 };
