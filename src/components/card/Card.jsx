@@ -3,9 +3,9 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import { baseUrl } from "../../context";
 
-export const Card = ({ imgSrc, imgAlt, title, description }) => {
+export const Card = ({ imgSrc, imgAlt, title, description, className }) => {
   return (
-    <div className="flex flex-col w-80">
+    <div className={`flex flex-col ${className}`}>
       {/* <img src={imgSrc} alt={imgAlt} /> */}
       <LazyLoadImage
         src={baseUrl + "/" + imgSrc}

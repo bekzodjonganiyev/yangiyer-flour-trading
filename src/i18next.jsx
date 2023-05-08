@@ -5,7 +5,7 @@ import HttpApi from "i18next-http-backend";
 
 import translationUz from "./assets/locales/uz/translation.json";
 import translationRu from "./assets/locales/ru/translation.json";
-import translationEn from "./assets/locales/eng/translation.json";
+import translationEn from "./assets/locales/en/translation.json";
 import translationAr from './assets/locales/ar/translation.json';
 const resources = {
   uz: {

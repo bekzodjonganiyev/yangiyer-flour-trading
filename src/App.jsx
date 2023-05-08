@@ -7,6 +7,7 @@ import { Photos } from "./pages/photos/Photos";
 
 import { smallActions } from "./context";
 import { News } from "./pages/news/News";
+import { Vacancies } from "./pages/vacancies/Vacancies";
 
 export const App = () => {
   return (
@@ -19,6 +20,7 @@ export const App = () => {
           <Route index element={<Home />} />
           <Route path="photos" element={<Photos />} />
           <Route path="news" element={<News />} />
+          <Route path="vacancies" element={<Vacancies />} />
         </Route>
       </Routes>
     </div>
