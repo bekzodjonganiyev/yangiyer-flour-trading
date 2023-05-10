@@ -2,7 +2,7 @@ import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 
 import { Hero } from "../../components/hero/Hero";
-import { Faq } from "../../components/faq/FAQ";
+import { Faq } from "../../components/faq/Faq";
 import { AboutUs } from "../../components/about_us/AboutUs";
 import { ContactForm } from "../../components/contact_form/ContactForm";
 import { ImageGallary } from "../../components/image_gallary/ImageGalary";
