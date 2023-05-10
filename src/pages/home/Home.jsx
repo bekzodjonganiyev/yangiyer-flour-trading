@@ -2,14 +2,15 @@ import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 
 import { Hero } from "../../components/hero/Hero";
+import { Faq } from "../../components/faq/FAQ";
 import { AboutUs } from "../../components/about_us/AboutUs";
+import { ContactForm } from "../../components/contact_form/ContactForm";
 import { ImageGallary } from "../../components/image_gallary/ImageGalary";
 import { Products } from "../../components/products/Products";
 import { Card } from "../../components/card/Card";
 import { LeftArrow } from "../../assets/icons";
 
 import { newsActions, UsersContext } from "../../context";
-import { Faq } from "../../components/faq/FAQ";
 
 export const Home = () => {
   const { news, vacancys } = useContext(UsersContext);
@@ -81,6 +82,7 @@ export const Home = () => {
         </div>
       </div>
       <Faq />
+      <ContactForm />
     </div>
   );
 };

@@ -91,14 +91,14 @@ export const Products = () => {
   // }, []);
 
   const photos = [
-    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683640436629.png",
-    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683640468778.png",
-    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683640492625.png",
-    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683640514101.png",
-    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683640436629.png",
-    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683640468778.png",
-    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683640492625.png",
-    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683640514101.png",
+    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683707213624.png",
+    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683707193861.png",
+    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683707175779.png",
+    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683707153127.png",
+    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683707213624.png",
+    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683707193861.png",
+    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683707175779.png",
+    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683707153127.png",
   ];
 
   return (
