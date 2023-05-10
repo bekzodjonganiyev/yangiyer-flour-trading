@@ -60,7 +60,7 @@ export const Navbar = () => {
           </Link>
         </div>
         <div
-          className={`w-3/6 xl:flex justify-between 
+          className={`w-3/6 xl:flex justify-between gap-6
           ${isOpen.hamburger ? "xl:static absolute top-0 left-0 max-xl:w-full max-xl:h-screen xl:bg-inherit bg-[rgba(0,0,0,0.96)] max-xl:flex max-xl:flex-col max-xl:justify-start max-xl:pt-24" : "hidden"}`}
         >
           <Link
@@ -73,28 +73,28 @@ export const Navbar = () => {
 
           <Link
             to={`${i18next.language}/latest-news`}
-            className="max-xl:pl-14 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8"
+            className="max-xl:pl-14 max-xl:text-[#F06D06] font-bold text-xl max-xl:mb-8"
             onClick={() => toggleHamburger()}
           >
             {t("Header.lastNews")}
           </Link>
           <Link
             to={`${i18next.language}/actual-news`}
-            className="max-xl:pl-14 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8"
+            className="max-xl:pl-14 max-xl:text-[#F06D06] font-bold text-xl max-xl:mb-8"
             onClick={() => toggleHamburger()}
           >
             {t("Header.actualNews")}
           </Link>
           <Link
             to={`${i18next.language}/photo-news`}
-            className="max-xl:pl-14 max-xl:text-[#F06D06]  border-red-900 max-xl:mb-8"
+            className="max-xl:pl-14 max-xl:text-[#F06D06] font-bold text-xl max-xl:mb-8"
             onClick={() => toggleHamburger()}
           >
             {t("Header.photoNews")}
           </Link>
           <Link
             to={`${i18next.language}/video-news`}
-            className="max-xl:pl-14 max-xl:text-[#F06D06]  border-red-900"
+            className="max-xl:pl-14 max-xl:text-[#F06D06] font-bold text-xl"
             onClick={() => toggleHamburger()}
           >
             {t("Header.videoNews")}

@@ -15,7 +15,7 @@ export const Card = ({ imgSrc, imgAlt, title, description, className }) => {
         width={"100%"}
         height={"100%"}
       />
-      <h2 className="text-xl text-secondary_color font-semibold line-clamp-2 mb-4 text-left">
+      <h2 className="text-xl text-secondary_color font-semibold mb-4 text-left">
         {title}
       </h2>
       <p

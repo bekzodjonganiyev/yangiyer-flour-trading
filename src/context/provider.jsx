@@ -5,7 +5,7 @@ import { UsersContext, ScrollContext } from "./context";
 export let newsActions = null;
 export let smallActions = null;
 export let userActions = null;
-export const baseUrl = "https://new-tkti-back.herokuapp.com";
+export const baseUrl = "https://tkti-back-lexde.ondigitalocean.app";
 
 export const UsersProvider = ({ children }) => {
   // Scroll value handled here

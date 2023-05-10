@@ -1,7 +1,6 @@
-import React from "react";
-import { useEffect } from "react";
-import { useContext } from "react";
+import { useEffect, useContext } from "react";
 import Slider from "react-slick";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -52,11 +51,10 @@ function SamplePrevArrow(props) {
 }
 
 const settings = {
-  className: "center",
   infinite: true,
   slidesToShow: 4,
   speed: 500,
-  nextArrow: <SampleNextArrow className="" />,
+  nextArrow: <SampleNextArrow />,
   prevArrow: <SamplePrevArrow />,
   responsive: [
     {
@@ -87,10 +85,21 @@ const settings = {
 };
 
 export const Products = () => {
-  const { photos } = useContext(UsersContext);
-  useEffect(() => {
-    smallActions.getPhotos("photo/all");
-  }, []);
+  // const { photos } = useContext(UsersContext);
+  // useEffect(() => {
+  //   smallActions.getPhotos("photo/all");
+  // }, []);
+
+  const photos = [
+    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683640436629.png",
+    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683640468778.png",
+    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683640492625.png",
+    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683640514101.png",
+    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683640436629.png",
+    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683640468778.png",
+    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683640492625.png",
+    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683640514101.png",
+  ];
 
   return (
     <div className="bg-[#F0F0F0] py-10 mb-20">
@@ -98,14 +107,16 @@ export const Products = () => {
         <h1 className="text-secondary_color text-4xl font-bold mb-10 text-center">
           Bizning maxsulotlarimiz
         </h1>
-        <Slider {...settings} className="">
+        <Slider {...settings}>
           {photos.map((item) => (
-            <div key={item._id} className="h-[600px] w-[400px] px-3">
-              <img
-                src={baseUrl + "/" + item.photo}
-                alt={item.width}
-                className="w-full h-full"
-                loading="lazy"
+            <div key={item} className="px-3">
+              <LazyLoadImage
+                src={item}
+                alt={item.name}
+                effect={"blur"}
+                className="w-full img-lazy rounded mb-4"
+                width={"100%"}
+                height={"100%"}
               />
             </div>
           ))}
