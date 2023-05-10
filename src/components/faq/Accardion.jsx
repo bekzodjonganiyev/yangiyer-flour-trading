@@ -1,6 +1,6 @@
 import { Accordion } from "flowbite-react";
 
-export const Faq = () => {
+export const Accardion = () => {
   return (
     <div className="container w-[90%] mx-auto mb-20">
       <h1 className="text-secondary_color text-4xl font-bold mb-10 text-center">
