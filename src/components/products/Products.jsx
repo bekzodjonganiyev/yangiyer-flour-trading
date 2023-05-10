@@ -91,7 +91,7 @@ export const Products = () => {
   // }, []);
 
   const photos = [
-    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683707213624.png",
+    "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683707213624.png ",
     "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683707193861.png",
     "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683707175779.png",
     "https://tkti-back-lexde.ondigitalocean.app/uploads/file-1683707153127.png",
