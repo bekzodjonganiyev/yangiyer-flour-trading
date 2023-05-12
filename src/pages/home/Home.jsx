@@ -27,12 +27,12 @@ export const Home = () => {
       <ImageGallary />
       <div className="container w-[90%] mx-auto mb-20">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-secondary_color text-4xl font-bold">
+          <h1 className="text-secondary_color text-2xl md:text-4xl font-bold">
             O'rganmoqchi bo'lgan mavzuni tanlang
           </h1>
           <Link
             to={"news"}
-            className="bg-primary_color py-2 px-6 rounded-md text-white flex items-center gap-2"
+            className="bg-primary_color py-2 px-6 rounded-md text-white flex items-center gap-2 max-md:hidden"
           >
             Barchasi{" "}
             <span>
@@ -40,10 +40,10 @@ export const Home = () => {
             </span>
           </Link>
         </div>
-        <div>
-          {news.map((item) => (
+        <div className="grid grid-cols-4 max-md:grid-cols-1 gap-6">
+          {news.slice(0, 4).map((item) => (
             <Card
-              className={"w-80"}
+              className={""}
               key={item._id}
               imgSrc={item.photo}
               imgAlt={item.title_uz}
@@ -52,16 +52,28 @@ export const Home = () => {
             />
           ))}
         </div>
+        <Link
+          to={"news"}
+          className="bg-primary_color py-2 px-6 mt-7 text-center rounded-md text-white hidden items-center justify-center gap-2 max-md:flex"
+        >
+          <p className="gap-2 flex items-center">
+            {" "}
+            Barchasi{" "}
+            <span>
+              <LeftArrow />
+            </span>
+          </p>
+        </Link>
       </div>
       <Products />
       <div className="container w-[90%] mx-auto mb-20">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-secondary_color text-4xl font-bold">
+          <h1 className="text-secondary_color text-2xl md:text-4xl font-bold">
             Vakansiyalar
           </h1>
           <Link
             to={"vacancies"}
-            className="bg-primary_color py-2 px-6 rounded-md text-white flex items-center gap-2"
+            className="bg-primary_color py-2 px-6 rounded-md text-white flex items-center gap-2 max-md:hidden"
           >
             Barchasi{" "}
             <span>
@@ -69,8 +81,8 @@ export const Home = () => {
             </span>
           </Link>
         </div>
-        <div className="grid grid-cols-3">
-          {vacancys.map((item) => (
+        <div className="grid grid-cols-3 max-md:grid-cols-1 gap-6">
+          {vacancys.slice(0, 3).map((item) => (
             <Card
               key={item._id}
               imgSrc={item.photo}
@@ -80,6 +92,18 @@ export const Home = () => {
             />
           ))}
         </div>
+        <Link
+          to={"vacancies"}
+          className="bg-primary_color py-2 px-6 mt-7 text-center rounded-md text-white hidden items-center justify-center gap-2 max-md:flex"
+        >
+          <p className="gap-2 flex items-center">
+            {" "}
+            Barchasi{" "}
+            <span>
+              <LeftArrow />
+            </span>
+          </p>
+        </Link>
       </div>
       <Accardion />
       <ContactForm />

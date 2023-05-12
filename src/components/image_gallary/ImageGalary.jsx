@@ -1,6 +1,7 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import PhotoAlbum from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
+import { Spinner } from "flowbite-react";
 import "yet-another-react-lightbox/styles.css";
 
 // import optional lightbox plugins
@@ -10,16 +11,22 @@ import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 
-// import photos from "./photos";
-import { UsersContext, smallActions, baseUrl } from "../../context";
+import { baseUrl } from "../../context";
 import { Link } from "react-router-dom";
 import { LeftArrow } from "../../assets/icons";
+import apiClient from "../../utils/apiClient";
 
 export const ImageGallary = () => {
-  const { photos } = useContext(UsersContext);
+  const [photos, setPhotos] = useState({
+    data: [],
+    isLoading: true,
+    error: null,
+  });
+
   const [index, setIndex] = useState(-1);
   const breakpoints = [1080, 640, 384, 256, 128, 96, 64, 48];
-  const images = photos?.map((photo) => ({
+
+  const images = photos?.data?.map((photo) => ({
     src: baseUrl + "/" + photo.photo,
     width: +photo.width,
     height: +photo.height,
@@ -32,6 +39,7 @@ export const ImageGallary = () => {
       };
     }),
   }));
+
   const slides = images?.map(({ src, width, height, sliderImages }) => ({
     src,
     width,
@@ -43,18 +51,31 @@ export const ImageGallary = () => {
     })),
   }));
 
+  const getData = async () => {
+    const res = await apiClient.get("photo/all");
+    if (res.status === 200) {
+      setPhotos({
+        data: res.data,
+        isLoading: false,
+        error: "",
+      });
+    } else {
+      setPhotos({ data: [], isLoading: false, error: "Nimadir xato" });
+    }
+  };
+
   useEffect(() => {
-    smallActions.getPhotos("photo/all");
+    getData();
   }, []);
   return (
     <div className="mb-20 container w-[90%] mx-auto">
       <div className="flex justify-between items-center mb-8  ">
-        <h1 className="text-secondary_color text-4xl font-bold">
+        <h1 className="text-secondary_color text-2xl md:text-4xl font-bold">
           Fotogaleriya
         </h1>
         <Link
           to={"photos"}
-          className="bg-primary_color py-2 px-6 rounded-md text-white flex items-center gap-2"
+          className="bg-primary_color py-2 px-6 rounded-md text-white flex items-center gap-2 max-md:hidden"
         >
           Barchasi{" "}
           <span>
@@ -62,18 +83,38 @@ export const ImageGallary = () => {
           </span>
         </Link>
       </div>
-      <PhotoAlbum
-        photos={images}
-        layout="columns"
-        spacing={20}
-        targetRowHeight={300}
-        onClick={({ index }) => setIndex(index)}
-        columns={(containerWidth) => {
-          if (containerWidth < 400) return 1;
-          if (containerWidth < 800) return 3;
-          return 4;
-        }}
-      />
+      {photos.isLoading ? (
+        <Spinner
+          color="info"
+          aria-label="Extra large spinner example"
+          size="xl"
+        />
+      ) : (
+        <PhotoAlbum
+          photos={images}
+          layout="columns"
+          spacing={20}
+          targetRowHeight={300}
+          onClick={({ index }) => setIndex(index)}
+          columns={(containerWidth) => {
+            if (containerWidth < 400) return 1;
+            if (containerWidth < 800) return 3;
+            return 4;
+          }}
+        />
+      )}
+      <Link
+        to={"photos"}
+        className="bg-primary_color py-2 px-6 mt-7 text-center rounded-md text-white hidden items-center justify-center gap-2 max-md:flex"
+      >
+        <p className="gap-2 flex items-center">
+          {" "}
+          Barchasi{" "}
+          <span>
+            <LeftArrow />
+          </span>
+        </p>
+      </Link>
 
       <Lightbox
         slides={slides}

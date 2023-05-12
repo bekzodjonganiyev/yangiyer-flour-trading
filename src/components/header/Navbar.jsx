@@ -48,9 +48,9 @@ export const Navbar = () => {
   };
   return (
     <header
-      className={`py-4 text-white  transition-opacity md:absolute relative md:backdrop-blur-xl max-md:bg-secondary_color
+      className={`py-4 text-white transition-opacity relative md:backdrop-blur-xl max-md:bg-secondary_color
       ${scrollValue > 0 || pathname !== "/" ? "bg-secondary_color" : "" }
-      ${pathname === "/" ? "absolute w-full" : ""}
+      ${pathname === "/" ? "absolute w-full md:absolute " : ""}
       ${pathname !== "/" ? "sticky top-0" : ""} w-full z-10`}
     >
       <div className="flex items-center justify-between container mx-auto w-[90%]">

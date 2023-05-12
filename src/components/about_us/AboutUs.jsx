@@ -7,12 +7,12 @@ export const AboutUs = () => {
   const [isModal, setIsModal] = useState(false);
   const [visible, setVisible] = useState(false);
   return (
-    <div className="flex justify-between gap-10 container mx-auto w-[90%] mb-20">
-      <div className="w-1/2">
-        <h1 className="text-secondary_color text-4xl font-bold mb-10">
+    <div className="flex justify-between gap-10 container mx-auto w-[90%] mb-20 max-md:flex-col">
+      <div className="w-1/2 max-md:w-full">
+        <h1 className="text-secondary_color text-4xl font-bold mb-10 max-md:mb-4 max-md:text-xl">
           Biz haqimizda
         </h1>
-        <p className="text-secondary_color text-xl">
+        <p className="text-secondary_color text-xl max-md:text-sm">
           “Yangiyer Flour Trading” MChJ mustaqil, oilaviy kompaniya hisoblanadi.
           1991 yildan beri faoliyat yuritadi. Markaziy Osiyoning markazida
           joylashgan. "Yangiyer Flour Trading" MChJ o'z maqsadi bo'yicha
@@ -29,7 +29,7 @@ export const AboutUs = () => {
       </div>
       <div
         onClick={() => setIsModal(true)}
-        className={`w-1/2 cursor-pointer ${!isModal ? "relative" : ""}`}
+        className={`w-1/2 max-md:w-full cursor-pointer max-md:h-96 ${!isModal ? "relative" : ""} `}
         style={{
           borderRadius: "10px",
           backgroundRepeat: "no-repeat",
