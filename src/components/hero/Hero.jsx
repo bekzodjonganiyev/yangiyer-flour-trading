@@ -79,7 +79,7 @@ export const Hero = () => {
           </h1>
         ) : (
           banner.data.map((item) => (
-            <div className="w-full h-[700px] max-md:h-auto relative border border-red-400 -z-30" key={item._id}>
+            <div className="w-full h-[700px] max-md:h-auto relative -z-30" key={item._id}>
               <div className="absolute top-1/3 left-1/2 -translate-x-1/2 z-50 max-md:hidden">
                 <h1 className="text-5xl font-bold text-white text-center">
                   YANGIYER FLOUR{" "}

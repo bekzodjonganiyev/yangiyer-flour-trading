@@ -13,7 +13,7 @@ import { UsersContext } from "../../context";
 export const Navbar = () => {
   const { t } = useTranslation();
   const { pathname } = useLocation();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { scrollValue } = useContext(UsersContext);
   const [isOpen, setOpen] = useState({ hamburger: false, lang: false });
   const language = [
@@ -39,29 +39,46 @@ export const Navbar = () => {
   };
 
   const changeLanguage = (code) => {
-    let pathnameLang = "uz"
-    if (pathname.split("/")[1] === "uz") pathnameLang = "uz"
-    if (pathname.split("/")[1] === "ru") pathnameLang = "ru"
-    if (pathname.split("/")[1] === "en") pathnameLang = "en"
+    let pathnameLang = "uz";
+    if (pathname.split("/")[1] === "uz") pathnameLang = "uz";
+    if (pathname.split("/")[1] === "ru") pathnameLang = "ru";
+    if (pathname.split("/")[1] === "en") pathnameLang = "en";
     navigate(pathname.replace(pathnameLang, code));
     i18next.changeLanguage(code);
   };
   return (
     <header
       className={`py-4 text-white transition-opacity relative md:backdrop-blur-xl max-md:bg-secondary_color
-      ${scrollValue > 0 || pathname !== "/" ? "bg-secondary_color" : "" }
+      ${scrollValue > 0 || pathname !== "/" ? "bg-secondary_color" : ""}
       ${pathname === "/" ? "absolute w-full md:absolute " : ""}
       ${pathname !== "/" ? "sticky top-0" : ""} w-full z-10`}
     >
       <div className="flex items-center justify-between container mx-auto w-[90%]">
         <div className="w-1/6">
-          <Link to="/">
-            <img src={logo} alt="" width={"50"} height={"20"} className="" />
+          <Link to="/" className="my-4 block  ">
+            <div className="flex items-center ">
+              <img src={logo} alt="Main logo" className="w-14 h-14" />
+              <p
+                className={`text-white text-center  font-bold`}
+              >
+                <span>
+                  {t("Header.name")}
+                  <br />
+                </span>
+                <span className={`text-primary_color ml-1`}>
+                  {t("Header.name2")}
+                </span>
+              </p>
+            </div>
           </Link>
         </div>
         <div
-          className={`w-3/6 xl:flex justify-between gap-6
-          ${isOpen.hamburger ? "xl:static absolute top-0 left-0 max-xl:w-full max-xl:h-screen xl:bg-inherit bg-[rgba(0,0,0,0.96)] max-xl:flex max-xl:flex-col max-xl:justify-start max-xl:pt-24" : "hidden"}`}
+          className={`w-3/6 xl:flex justify-end gap-16
+          ${
+            isOpen.hamburger
+              ? "xl:static absolute top-0 left-0 max-xl:w-full max-xl:h-screen xl:bg-inherit bg-[rgba(0,0,0,0.96)] max-xl:flex max-xl:flex-col max-xl:justify-start max-xl:pt-24"
+              : "hidden"
+          }`}
         >
           <Link
             to="/"
@@ -72,37 +89,37 @@ export const Navbar = () => {
           </Link>
 
           <Link
-            to={`${i18next.language}/latest-news`}
+            to={`#`}
             className="max-xl:pl-14 max-xl:text-[#F06D06] font-bold text-xl max-xl:mb-8"
             onClick={() => toggleHamburger()}
           >
-            {t("Header.lastNews")}
+            {t("Header.about")}
           </Link>
           <Link
-            to={`${i18next.language}/actual-news`}
+            to={`#`}
             className="max-xl:pl-14 max-xl:text-[#F06D06] font-bold text-xl max-xl:mb-8"
             onClick={() => toggleHamburger()}
           >
-            {t("Header.actualNews")}
+            {t("Header.product")}
           </Link>
           <Link
-            to={`${i18next.language}/photo-news`}
+            to={`#`}
             className="max-xl:pl-14 max-xl:text-[#F06D06] font-bold text-xl max-xl:mb-8"
             onClick={() => toggleHamburger()}
           >
-            {t("Header.photoNews")}
+            {t("Header.partners")}
           </Link>
           <Link
-            to={`${i18next.language}/video-news`}
+            to={`#`}
             className="max-xl:pl-14 max-xl:text-[#F06D06] font-bold text-xl"
             onClick={() => toggleHamburger()}
           >
-            {t("Header.videoNews")}
+            {t("Header.ContactUs")}
           </Link>
           <div className="max-xl:flex gap-4 hidden pl-14 mt-8">
             {" "}
             {language.map((item) => (
-              <button 
+              <button
                 key={item.code}
                 className="bg-[#F2F2F2] text-black rounded p-2"
                 onClick={() => {
