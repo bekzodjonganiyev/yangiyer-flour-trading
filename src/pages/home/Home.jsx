@@ -11,6 +11,7 @@ import { Card } from "../../components/card/Card";
 import { LeftArrow } from "../../assets/icons";
 
 import { newsActions, UsersContext } from "../../context";
+import { Partners } from "../../components/partners/Partners";
 
 export const Home = () => {
   const { news, vacancys } = useContext(UsersContext);
@@ -25,6 +26,7 @@ export const Home = () => {
       <Hero />
       <AboutUs />
       <ImageGallary />
+    
       <div className="container w-[90%] mx-auto mb-20">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-secondary_color text-2xl md:text-4xl font-bold">
@@ -65,7 +67,9 @@ export const Home = () => {
           </p>
         </Link>
       </div>
+
       <Products />
+
       <div className="container w-[90%] mx-auto mb-20">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-secondary_color text-2xl md:text-4xl font-bold">
@@ -105,7 +109,9 @@ export const Home = () => {
           </p>
         </Link>
       </div>
+
       <Accardion />
+      <Partners />
       <ContactForm />
     </div>
   );

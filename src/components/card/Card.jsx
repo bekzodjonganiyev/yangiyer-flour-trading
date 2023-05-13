@@ -1,12 +1,12 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Zoom} from "react-awesome-reveal";
+import { Zoom, Roll,AttentionSeeker, Reveal} from "react-awesome-reveal";
 
 import { baseUrl } from "../../context";
 
 export const Card = ({ imgSrc, imgAlt, title, description, className }) => {
   return (
-    <Zoom >
+    <Reveal >
       <div className="flex flex-col">
         <LazyLoadImage
           src={baseUrl + "/" + imgSrc}
@@ -24,6 +24,6 @@ export const Card = ({ imgSrc, imgAlt, title, description, className }) => {
           dangerouslySetInnerHTML={{ __html: description }}
         />
       </div>
-    </Zoom >
+    </Reveal >
   );
 };

@@ -4,10 +4,10 @@ import { Route, Routes } from "react-router-dom";
 import { Layout } from "./components/layout";
 import { Home } from "./pages/home/Home";
 import { Photos } from "./pages/photos/Photos";
-
-import { smallActions } from "./context";
 import { News } from "./pages/news/News";
 import { Vacancies } from "./pages/vacancies/Vacancies";
+
+import { smallActions } from "./context";
 
 export const App = () => {
   return (

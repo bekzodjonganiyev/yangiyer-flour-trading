@@ -42,17 +42,17 @@ export const Footer = () => {
               <div
                 className={` mx-auto my-12  flex items-center justify-end text-white font-bold xl:text-base `}
               >
-                <NavLink to={`${i18next.language}/about-us`}>
+                <NavLink to="#">
                   <span className="mx-3">{t("Header.about")}</span>{" "}
                 </NavLink>
-                <NavLink to={`${i18next.language}/products`}>
+                <NavLink to="#">
                   <span className="mx-3">{t("Header.product")}</span>{" "}
                 </NavLink>
 
-                <NavLink to={`${i18next.language}/partners`}>
+                <NavLink to="#">
                   <span className="mx-3">{t("Header.partners")}</span>
                 </NavLink>
-                <NavLink to={`${i18next.language}/contact-us`}>
+                <NavLink to="#">
                   <span className="mx-3">{t("Header.ContactUs")}</span>
                 </NavLink>
               </div>
