@@ -31,7 +31,6 @@ export const Partners = () => {
 
   if (partners.data.length < 3)
     partners.data = [...partners.data, ...partners.data, ...partners.data];
-  console.log(partners.data);
 
   const settings = {
     infinite: true,
@@ -79,8 +78,8 @@ export const Partners = () => {
       <div className=" flex justify-center items-center ">
         <div className="partners container-fluid w-[100%] mx-auto ">
           <Slider {...settings}>
-            {partners.data.map((image) => (
-              <div key={image.link} className="h-40">
+            {partners.data.map((image, id) => (
+              <div key={id} className="h-40">
                 <div className="bg-[#F0F0F0] m-4 py-4 h-40 rounded-xl cursor-pointer flex items-center justify-center">
                   <img
                     className=""

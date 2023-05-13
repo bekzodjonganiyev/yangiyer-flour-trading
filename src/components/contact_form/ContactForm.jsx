@@ -1,13 +1,13 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
+import { Alert } from "flowbite-react";
 
 export const ContactForm = () => {
   const { t } = useTranslation();
 
   const sendEmail = (e) => {
     e.preventDefault();
-    const fmData = new FormData();
     const obj = {
       fullName: e.target.fullName.value,
       phone: e.target.phone.value,
@@ -22,11 +22,16 @@ export const ContactForm = () => {
         token: localStorage.getItem("token"),
         "Content-type": "application/json",
       },
-    });
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+      })
+      .catch((err) => console.log(err));
   };
   return (
-    <div className="bg-white">
-      <div className="container mx-auto w-full flex items-center justify-between lg:flex-row max-md:flex-col">
+    <div className="bg-white mb-10">
+      <div className="container mx-auto w-[90%] flex justify-between lg:flex-row max-md:flex-col ">
         <Slide className="w-1/2 max-md:w-full" direction="left">
           <div className="">
             <form onSubmit={sendEmail} className="container h-[full] my-3 ">
@@ -65,6 +70,7 @@ export const ContactForm = () => {
 
                 <label className="block ">
                   <textarea
+                    minLength={100}
                     cols="30"
                     required
                     rows="10"
@@ -88,15 +94,15 @@ export const ContactForm = () => {
           </div>
         </Slide>
 
-        <Slide direction="right">
-          <iframe
-            className=" w-[600px] h-[450px] rounded-3xl "
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2997.971617605521!2d69.2168139758326!3d41.287722171312694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDE3JzE1LjgiTiA2OcKwMTMnMDkuOCJF!5e0!3m2!1sru!2s!4v1682497109753!5m2!1sru!2s"
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </Slide>
+        {/* <div className="max-md:w-full w-full rounded-3xl"> */}
+        <iframe
+          className="w-1/2 rounded-3xl max-md:w-full max-md:h-96"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2997.971617605521!2d69.2168139758326!3d41.287722171312694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDE3JzE1LjgiTiA2OcKwMTMnMDkuOCJF!5e0!3m2!1sru!2s!4v1682497109753!5m2!1sru!2s"
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+        {/* </div> */}
       </div>
     </div>
   );

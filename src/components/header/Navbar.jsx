@@ -48,7 +48,7 @@ export const Navbar = () => {
   };
   return (
     <header
-      className={`py-4 text-white transition-opacity relative md:backdrop-blur-xl max-md:bg-secondary_color
+      className={`py-0 text-white transition-opacity relative md:backdrop-blur-xl max-md:bg-secondary_color
       ${scrollValue > 0 || pathname !== "/" ? "bg-secondary_color" : ""}
       ${pathname === "/" ? "absolute w-full md:absolute " : ""}
       ${pathname !== "/" ? "sticky top-0" : ""} w-full z-10`}
@@ -78,10 +78,10 @@ export const Navbar = () => {
         >
           <Link
             to="/"
-            className="max-xl:flex items-center hidden pl-14 -mt-12 mb-2"
+            className="max-xl:flex items-center hidden pl-14 -mt-20 mb-2 gap-4"
             onClick={() => toggleHamburger()}
           >
-            <img src={logo} alt="" width={"50"} height={"20"} className="" />
+            <img src={logo} alt="" width={"60"} height={"20"} className="" />
             <p className={`text-white text-center font-bold text-sm`}>
               <span>
                 YANGIYER FLOUR

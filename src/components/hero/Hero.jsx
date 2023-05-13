@@ -53,7 +53,7 @@ export const Hero = () => {
 
   const settings = {
     infinite: true,
-    speed: 500,
+    speed: 400,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
@@ -63,8 +63,8 @@ export const Hero = () => {
         {...settings}
         autoplay={true}
         cssEase="linear"
-        autoplaySpeed={2000}
-        fade={true}
+        autoplaySpeed={4000}
+        // fade={true}
         pauseOnHover={false}
       >
         {banner.isLoading ? (
@@ -81,27 +81,25 @@ export const Hero = () => {
         ) : (
           banner.data.map((item) => (
             <div
-              className="w-full h-[700px] max-md:h-auto relative -z-30"
+              className="w-full h-[700px] max-md:h-auto relative -z-30 bg-black"
               key={item._id}
             >
-              <div className="absolute top-1/3 left-1/2 -translate-x-1/2 z-50 max-md:hidden">
-                <h1 className="text-5xl font-bold text-white text-center">
+              <div className="absolute md:top-1/3 left-1/2 md:-translate-x-1/2 z-50 max-md:bottom-20 max-md:left-0 max-md:px-4">
+                <h1 className="text-5xl font-bold text-white text-center shadow-md max-md:hidden">
                   YANGIYER FLOUR{" "}
                   <span className="text-primary_color">TRADING</span>
                 </h1>
-                <p className="text-xl text-white text-center">
-                  Un keyinchalik non, makaron va non mahsulotlari kabi turli
-                  oziq-ovqat mahsulotlarida foydalanish uchun qadoqlanishi va
-                  sotilishi mumkin. Un zavodlari turli bozorlarning
-                  ehtiyojlarini qondirish uchun butun bug'doy, glyutensiz yoki
-                  organik un kabi maxsus unlarni ham ishlab chiqarishi mumkin.
+                <p className="text-xl text-white text-center mt-10">
+                  {item.title}
                 </p>
               </div>
               <LazyLoadImage
+                style={{
+                  opacity: "0.5",
+                }}
                 src={baseUrl + "/" + item.banner_img}
                 alt={item.title}
                 effect={"blur"}
-                className="w-full img-lazy opacity-5"
                 placeholder={
                   <Spinner
                     color="info"
@@ -116,7 +114,7 @@ export const Hero = () => {
           ))
         )}
       </Slider>
-      <div className="flex max-md:flex-col max-md:gap-10 justify-between bg-white rounded-3xl py-10 px-20 md:shadow-md md:w-[90%] md:-mt-32 mx-auto relative container">
+      <div className="flex max-md:flex-col max-md:gap-10 justify-between bg-white rounded-3xl md:py-10 md:px-20 px-4 md:shadow-2xl md:w-[90%] md:-mt-32 mx-auto relative container">
         {motto.isLoading ? (
           <div className="w-[30%]">
             <HeroIcon />
@@ -137,15 +135,13 @@ export const Hero = () => {
           </div>
         ) : (
           motto?.data?.slice(0, 3).map((item) => (
-            <Fade key={item._id}>
-              <div className="md:w-[30%] max-md:rounded-3xl max-md:shadow-md max-md:py-10 max-md:px-20">
-                <HeroIcon />
-                <h2 className="text-2xl text-secondary_color  font-bold my-4">
-                  {item.title_uz}
-                </h2>
-                <p className="text-secondary_color text-xl">{item.body_uz}</p>
-              </div>
-            </Fade>
+            <div key={item._id} className="md:w-[30%] max-md:bg-slate-50 max-md:rounded-3xl max-md:shadow-md max-md:py-10 max-md:px-2">
+              <HeroIcon />
+              <h2 className="text-2xl text-secondary_color  font-bold my-4">
+                {item.title_uz}
+              </h2>
+              <p className="text-secondary_color text-xl">{item.body_uz}</p>
+            </div>
           ))
         )}
       </div>

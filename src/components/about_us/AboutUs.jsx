@@ -14,7 +14,7 @@ export const AboutUs = () => {
           <h1 className="text-secondary_color text-4xl font-bold mb-10 max-md:mb-4 max-md:text-xl">
             Biz haqimizda
           </h1>
-          <p className="text-secondary_color text-xl max-md:text-sm">
+          <p className="text-secondary_color text-2xl max-md:text-lg">
             “Yangiyer Flour Trading” MChJ mustaqil, oilaviy kompaniya
             hisoblanadi. 1991 yildan beri faoliyat yuritadi. Markaziy Osiyoning
             markazida joylashgan. "Yangiyer Flour Trading" MChJ o'z maqsadi
@@ -31,61 +31,57 @@ export const AboutUs = () => {
         </div>
       </Slide>
 
-      <Slide direction="right"
-        className={`w-1/2 max-md:w-full cursor-pointer max-md:h-96 ${
-          !isModal ? "relative" : ""
-        } `}
+      <div
+        onClick={() => setIsModal(true)}
+        className={`w-1/2 max-md:w-full cursor-pointer max-md:h-96 rounded-2xl ${ !isModal ? "relative" : ""}`}
         style={{
-          borderRadius: "10px",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "container",
           backgroundImage: `url("https://backend.tkti.uz/uploads/file-1682455807124.png")`,
         }}
       >
-        <div onClick={() => setIsModal(true)}>
-          <span className="glightbox_video">
-            <span className={"play-btn"} href="#"></span>
-          </span>
-          {isModal && (
+        <span className="glightbox_video">
+          <span className={"play-btn"} href="#"></span>
+        </span>
+        {isModal && (
+          <div
+            className="mx-auto w-screen h-screen absolute top-0 right-0 backdrop-blur-sm z-50 flex items-center justify-center"
+            onClick={() => setIsModal(false)}
+          >
             <div
-              className="mx-auto w-screen h-screen absolute top-0 right-0 backdrop-blur-sm z-50 flex items-center justify-center"
-              onClick={() => setIsModal(false)}
+              onClick={(e) => e.stopPropagation()}
+              className="w-2/3 max-md:w-full relative bg-black"
+              onMouseEnter={() => {
+                setVisible(true);
+                console.log("enter");
+              }}
+              onMouseLeave={() => {
+                setVisible(false);
+                console.log("leave");
+              }}
             >
-              <div
-                onClick={(e) => e.stopPropagation()}
-                className="w-2/3 relative bg-black"
-                onMouseEnter={() => {
-                  setVisible(true);
-                  console.log("enter");
-                }}
-                onMouseLeave={() => {
-                  setVisible(false);
-                  console.log("leave");
-                }}
-              >
-                {visible && (
-                  <button
-                    className="bg-red-600 w-16 h-16 absolute right-2 top-2 z-50 text-white font-bold text-xl rounded-full"
-                    onClick={() => setIsModal(false)}
-                  >
-                    X
-                  </button>
-                )}
-                <iframe
-                  width="100%"
-                  height="506"
-                  src="https://www.youtube.com/embed/G0zm9TybxpU"
-                  title="Firma uchun video"
-                  frameborder="1"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-              </div>
+              {visible && (
+                <button
+                  className="bg-red-600 w-16 h-16 absolute right-2 top-2 z-50 text-white font-bold text-xl rounded-full"
+                  onClick={() => setIsModal(false)}
+                >
+                  X
+                </button>
+              )}
+              <iframe
+                width="100%"
+                height="506"
+                src="https://www.youtube.com/embed/G0zm9TybxpU"
+                title="Firma uchun video"
+                frameborder="1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
             </div>
-          )}
-        </div>
-      </Slide>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

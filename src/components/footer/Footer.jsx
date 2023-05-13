@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   TelegramIcon,
   InstagramIcon,
@@ -9,7 +8,6 @@ import {
   PhoneIcon,
 } from "../../assets/icons";
 import { useTranslation } from "react-i18next";
-import i18next from "i18next";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 
@@ -19,7 +17,7 @@ export const Footer = () => {
     <>
       <footer className={` bg-[#063F58] w-full `}>
         <div className="container mx-auto w-[90%] my-[20px] ">
-          <div className="container  flex justify-between">
+          <div className="container flex justify-between">
             <div className="text-center">
               <Link to="/" className="my-4 block  ">
                 <div className="flex items-center ">
@@ -31,9 +29,7 @@ export const Footer = () => {
                       YANGIYER FLOUR
                       <br />
                     </span>
-                    <span className={`text-primary_color ml-1`}>
-                      TRADING
-                    </span>
+                    <span className={`text-primary_color ml-1`}>TRADING</span>
                   </p>
                 </div>
               </Link>
