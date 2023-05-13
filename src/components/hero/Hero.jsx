@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import Slider from "react-slick";
 import { Spinner } from "flowbite-react";
+import { JackInTheBox } from "react-awesome-reveal";
+import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -79,7 +80,10 @@ export const Hero = () => {
           </h1>
         ) : (
           banner.data.map((item) => (
-            <div className="w-full h-[700px] max-md:h-auto relative -z-30" key={item._id}>
+            <div
+              className="w-full h-[700px] max-md:h-auto relative -z-30"
+              key={item._id}
+            >
               <div className="absolute top-1/3 left-1/2 -translate-x-1/2 z-50 max-md:hidden">
                 <h1 className="text-5xl font-bold text-white text-center">
                   YANGIYER FLOUR{" "}
@@ -132,14 +136,16 @@ export const Hero = () => {
             </p>
           </div>
         ) : (
-          motto?.data?.map((item) => (
-            <div className="md:w-[30%] max-md:rounded-3xl max-md:shadow-md max-md:py-10 max-md:px-20">
-              <HeroIcon />
-              <h2 className="text-2xl text-secondary_color  font-bold my-4">
-                {item.title_uz}
-              </h2>
-              <p className="text-secondary_color text-xl">{item.body_uz}</p>
-            </div>
+          motto?.data?.slice(0, 3).map((item) => (
+            <JackInTheBox key={item._id}>
+              <div className="md:w-[30%] max-md:rounded-3xl max-md:shadow-md max-md:py-10 max-md:px-20">
+                <HeroIcon />
+                <h2 className="text-2xl text-secondary_color  font-bold my-4">
+                  {item.title_uz}
+                </h2>
+                <p className="text-secondary_color text-xl">{item.body_uz}</p>
+              </div>
+            </JackInTheBox>
           ))
         )}
       </div>

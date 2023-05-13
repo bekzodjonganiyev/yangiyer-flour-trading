@@ -54,57 +54,60 @@ export const Navbar = () => {
       ${pathname !== "/" ? "sticky top-0" : ""} w-full z-10`}
     >
       <div className="flex items-center justify-between container mx-auto w-[90%]">
-        <div className="w-1/6">
-          <Link to="/" className="my-4 block  ">
-            <div className="flex items-center ">
+        <div className="">
+          <Link to="/" className="my-4 block">
+            <div className="flex items-center">
               <img src={logo} alt="Main logo" className="w-14 h-14" />
-              <p
-                className={`text-white text-center  font-bold`}
-              >
+              <p className={`text-white text-center  font-bold`}>
                 <span>
-                  {t("Header.name")}
+                  YANGIYER FLOUR
                   <br />
                 </span>
-                <span className={`text-primary_color ml-1`}>
-                  {t("Header.name2")}
-                </span>
+                <span className={`text-primary_color ml-1`}>TRADING</span>
               </p>
             </div>
           </Link>
         </div>
         <div
-          className={`w-3/6 xl:flex justify-end gap-16
+          className={`w-3/6 xl:flex justify-end gap-10
           ${
             isOpen.hamburger
-              ? "xl:static absolute top-0 left-0 max-xl:w-full max-xl:h-screen xl:bg-inherit bg-[rgba(0,0,0,0.96)] max-xl:flex max-xl:flex-col max-xl:justify-start max-xl:pt-24"
+              ? "xl:static fixed top-0 left-0 max-xl:w-full max-xl:h-screen xl:bg-inherit bg-[rgba(0,0,0,0.96)] max-xl:flex max-xl:flex-col max-xl:justify-start max-xl:pt-24"
               : "hidden"
           }`}
         >
           <Link
             to="/"
-            className="max-xl:block hidden pl-14 -mt-16 mb-14"
+            className="max-xl:flex items-center hidden pl-14 -mt-12 mb-2"
             onClick={() => toggleHamburger()}
           >
             <img src={logo} alt="" width={"50"} height={"20"} className="" />
+            <p className={`text-white text-center font-bold text-sm`}>
+              <span>
+                YANGIYER FLOUR
+                <br />
+              </span>
+              <span className={`text-primary_color ml-1`}>TRADING</span>
+            </p>
           </Link>
 
           <Link
             to={`#`}
-            className="max-xl:pl-14 max-xl:text-[#F06D06] font-bold text-xl max-xl:mb-8"
+            className="max-xl:pl-14 max-xl:text-[#F06D06] font-bold text-xl max-xl:mb-2"
             onClick={() => toggleHamburger()}
           >
             {t("Header.about")}
           </Link>
           <Link
             to={`#`}
-            className="max-xl:pl-14 max-xl:text-[#F06D06] font-bold text-xl max-xl:mb-8"
+            className="max-xl:pl-14 max-xl:text-[#F06D06] font-bold text-xl max-xl:mb-2"
             onClick={() => toggleHamburger()}
           >
             {t("Header.product")}
           </Link>
           <Link
             to={`#`}
-            className="max-xl:pl-14 max-xl:text-[#F06D06] font-bold text-xl max-xl:mb-8"
+            className="max-xl:pl-14 max-xl:text-[#F06D06] font-bold text-xl max-xl:mb-2"
             onClick={() => toggleHamburger()}
           >
             {t("Header.partners")}

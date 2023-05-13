@@ -1,6 +1,7 @@
 import { Accordion, Spinner } from "flowbite-react";
 import { useEffect } from "react";
 import { useState } from "react";
+import { Fade} from "react-awesome-reveal";
 
 import apiClient from "../../utils/apiClient";
 
@@ -39,12 +40,14 @@ export const Accardion = () => {
       ) : (
         <Accordion>
           {faqs.data.map((item) => (
-            <Accordion.Panel>
+            <Accordion.Panel key={item._id}>
               <Accordion.Title>{item.title_uz}</Accordion.Title>
               <Accordion.Content>
-                <p className="mb-2 text-gray-500 dark:text-gray-400">
-                  {item.body_uz}
-                </p>
+                <Fade>
+                  <p className="mb-2 text-gray-500 dark:text-gray-400">
+                    {item.body_uz}
+                  </p>
+                </Fade>
               </Accordion.Content>
             </Accordion.Panel>
           ))}

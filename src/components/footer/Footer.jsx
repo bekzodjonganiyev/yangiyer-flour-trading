@@ -23,16 +23,16 @@ export const Footer = () => {
             <div className="text-center">
               <Link to="/" className="my-4 block  ">
                 <div className="flex items-center ">
-                  <img src={logo} alt="Main logo" className="w-24 h-24" />
+                  <img src={logo} alt="Main logo" className="w-16 h-16" />
                   <p
-                    className={`text-white lg:text-3xl xl:text-2xl md:text-lg  md:w-[70%] font-bold`}
+                    className={`text-white lg:text-3xl xl:text-2xl md:text-lg font-bold`}
                   >
                     <span>
-                      {t("Header.name")}
+                      YANGIYER FLOUR
                       <br />
                     </span>
                     <span className={`text-primary_color ml-1`}>
-                      {t("Header.name2")}
+                      TRADING
                     </span>
                   </p>
                 </div>
