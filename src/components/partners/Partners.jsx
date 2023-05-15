@@ -10,8 +10,7 @@ export const Partners = () => {
     isLoading: true,
     error: null,
   });
-  const [images, setImages] = useState([]);
-
+  
   const getData = async () => {
     const res = await apiClient.get("student_bolim/all");
     if (res.status === 200) {

@@ -45,6 +45,7 @@ export const Home = () => {
         <div className="grid grid-cols-4 max-md:grid-cols-1 gap-6">
           {news.slice(0, 4).map((item) => (
             <Card
+              to={`details/news/${item._id}`}
               className={""}
               key={item._id}
               imgSrc={item.photo}
@@ -88,6 +89,7 @@ export const Home = () => {
         <div className="grid grid-cols-3 max-md:grid-cols-1 gap-6">
           {vacancys.slice(0, 3).map((item) => (
             <Card
+              to={`details/elon/${item._id}`}
               key={item._id}
               imgSrc={item.photo}
               imgAlt={item.title_uz}

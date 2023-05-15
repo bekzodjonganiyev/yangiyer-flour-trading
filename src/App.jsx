@@ -2,8 +2,8 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 import { Layout } from "./components/layout";
+import {MoreDetails} from "./components/details/Details";
 import { Home } from "./pages/home/Home";
-import { Photos } from "./pages/photos/Photos";
 import { News } from "./pages/news/News";
 import { Vacancies } from "./pages/vacancies/Vacancies";
 
@@ -18,9 +18,10 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="photos" element={<Photos />} />
+          <Route path="photos" element={<Vacancies />} />
           <Route path="news" element={<News />} />
           <Route path="vacancies" element={<Vacancies />} />
+          <Route path="details/:key/:id" element={<MoreDetails />} />
         </Route>
       </Routes>
     </div>

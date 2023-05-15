@@ -135,7 +135,10 @@ export const Hero = () => {
           </div>
         ) : (
           motto?.data?.slice(0, 3).map((item) => (
-            <div key={item._id} className="md:w-[30%] max-md:bg-slate-50 max-md:rounded-3xl max-md:shadow-md max-md:py-10 max-md:px-2">
+            <div
+              key={item._id}
+              className="md:w-[30%] max-md:bg-slate-50 max-md:rounded-3xl max-md:shadow-md max-md:py-10 max-md:px-2"
+            >
               <HeroIcon />
               <h2 className="text-2xl text-secondary_color  font-bold my-4">
                 {item.title_uz}
