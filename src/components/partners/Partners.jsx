@@ -3,8 +3,10 @@ import { useState } from "react";
 import Slider from "react-slick";
 import { baseUrl } from "../../context";
 import apiClient from "../../utils/apiClient";
-
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 export const Partners = () => {
+  const { t } = useTranslation();
   const [partners, setPartners] = useState({
     data: [],
     isLoading: true,
@@ -72,7 +74,7 @@ export const Partners = () => {
       <h1
         className={`text-secondary_color text-4xl font-bold text-center my-3`}
       >
-        Hamkorlarimiz
+         {t("Header.OurPartners")}
       </h1>
       <div className=" flex justify-center items-center ">
         <div className="partners container-fluid w-[100%] mx-auto ">

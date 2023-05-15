@@ -1,10 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import { Slide } from "react-awesome-reveal";
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 
 import "./AboutUs.css";
 
 export const AboutUs = () => {
+  const { t } = useTranslation();
   const [isModal, setIsModal] = useState(false);
   const [visible, setVisible] = useState(false);
   return (
@@ -12,21 +15,10 @@ export const AboutUs = () => {
       <Slide className="w-1/2 max-md:w-full" direction="left">
         <div className="">
           <h1 className="text-secondary_color text-4xl font-bold mb-10 max-md:mb-4 max-md:text-xl">
-            Biz haqimizda
+          {t("Header.about")}
           </h1>
           <p className="text-secondary_color text-2xl max-md:text-lg">
-            “Yangiyer Flour Trading” MChJ mustaqil, oilaviy kompaniya
-            hisoblanadi. 1991 yildan beri faoliyat yuritadi. Markaziy Osiyoning
-            markazida joylashgan. "Yangiyer Flour Trading" MChJ o'z maqsadi
-            bo'yicha birinchi navli undan ikkinchi va uchinchi navgacha eng
-            sifatli bug'doy unini ishlab chiqarish va raqobatbardosh narxlarda
-            hech kimdan kam bo'lmagan xizmat ko'rsatish uchun qurilgan. Ulgurji
-            va ishlab chiqarish bozori sohasida 30 yildan ortiq tajribaga ega.
-            Bizning xodimlarimiz o'zlarining tajriba va bilimlarini mijozlarga
-            har kuni yangi mahsulotlarni to'plash yoki yetkazib berishga yordam
-            berish uchun ishlatadilar.Ulgurji va ishlab chiqarish bozori
-            sohasida 30 yildan ortiq tajribaga ega. Bizning xodimlarimiz
-            o'zlarining tajriba va bilimlarini mijozlarga har kuni{" "}
+          {t("about.title")}
           </p>
         </div>
       </Slide>

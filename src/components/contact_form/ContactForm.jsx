@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
 import { Alert } from "flowbite-react";
+import i18next from "i18next";
 
 export const ContactForm = () => {
   const { t } = useTranslation();
@@ -37,7 +38,7 @@ export const ContactForm = () => {
             <form onSubmit={sendEmail} className="container h-[full] my-3 ">
               <div className="mx-auto w-[95%] ">
                 <h2 className="text-5xl font-bold text-[#0B2A5A] my-5">
-                  Biz haqimizda
+                {t("Header.AboutUs")}
                 </h2>
                 <label className="">
                   <input

@@ -18,11 +18,6 @@ export const Navbar = () => {
   const [isOpen, setOpen] = useState({ hamburger: false, lang: false });
   const language = [
     {
-      code: "en",
-      name: "En",
-      conuntry_code: "gb",
-    },
-    {
       code: "uz",
       name: "Uz",
       conuntry_code: "uz",
@@ -31,6 +26,16 @@ export const Navbar = () => {
       code: "ru",
       name: "Ru",
       conuntry_code: "ru",
+    },
+    {
+      code: "en",
+      name: "En",
+      conuntry_code: "gb",
+    },
+    {
+      code: "ar",
+      name: "Ar",
+      conuntry_code: "ar",
     },
   ];
 
@@ -43,6 +48,7 @@ export const Navbar = () => {
     if (pathname.split("/")[1] === "uz") pathnameLang = "uz";
     if (pathname.split("/")[1] === "ru") pathnameLang = "ru";
     if (pathname.split("/")[1] === "en") pathnameLang = "en";
+    if (pathname.split("/")[1] === "ar") pathnameLang = "ar";
     navigate(pathname.replace(pathnameLang, code));
     i18next.changeLanguage(code);
   };

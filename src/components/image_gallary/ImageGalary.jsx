@@ -15,8 +15,10 @@ import { baseUrl } from "../../context";
 import { Link } from "react-router-dom";
 import { LeftArrow } from "../../assets/icons";
 import apiClient from "../../utils/apiClient";
-
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 export const ImageGallary = () => {
+  const { t } = useTranslation();
   const [photos, setPhotos] = useState({
     data: [],
     isLoading: true,
@@ -70,9 +72,18 @@ export const ImageGallary = () => {
   return (
     <div className="mb-20 container w-[90%] mx-auto">
       <div className="flex justify-between items-center mb-8  ">
-        <h1 className="text-secondary_color text-4xl font-bold mb-10 text-center">
-          Fotogaleriya
+        <h1 className="text-secondary_color text-2xl md:text-4xl font-bold">
+        {t("Header.Fotogalery")}
         </h1>
+        <Link
+          to={"photos"}
+          className="bg-primary_color py-2 px-6 rounded-md text-white flex items-center gap-2 max-md:hidden"
+        >
+          {t("Header.All")}
+          <span>
+            <LeftArrow />
+          </span>
+        </Link>
       </div>
       {photos.isLoading ? (
         <Spinner
@@ -99,8 +110,7 @@ export const ImageGallary = () => {
         className="bg-primary_color py-2 px-6 mt-7 text-center rounded-md text-white hidden items-center justify-center gap-2 max-md:flex"
       >
         <p className="gap-2 flex items-center">
-          {" "}
-          Barchasi{" "}
+        {t("Header.All")}
           <span>
             <LeftArrow />
           </span>

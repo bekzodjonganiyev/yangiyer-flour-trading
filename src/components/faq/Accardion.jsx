@@ -2,13 +2,16 @@ import { Accordion, Spinner } from "flowbite-react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Fade} from "react-awesome-reveal";
-
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 import apiClient from "../../utils/apiClient";
 
 export const Accardion = () => {
+  const { t } = useTranslation();
   const [faqs, setFaqs] = useState({ data: [], isLoading: true, error: null });
 
   const getData = async () => {
+    const { t } = useTranslation();
     const res = await apiClient.get("xalqaro_aloqa/all");
     if (res.status === 200) {
       setFaqs({
@@ -26,7 +29,7 @@ export const Accardion = () => {
   return (
     <div className="container w-[90%] mx-auto mb-20">
       <h1 className="text-secondary_color text-4xl font-bold mb-10 text-center">
-        Tez-tez so'raladigan savollar
+      {t("Header.Questions")}
       </h1>
 
       {faqs.isLoading ? (

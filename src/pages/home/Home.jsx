@@ -1,4 +1,8 @@
 import { useEffect, useContext } from "react";
+import { Partners } from "../../components/partners/Partners";
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
+
 import { Link } from "react-router-dom";
 
 import { Hero } from "../../components/hero/Hero";
@@ -11,9 +15,9 @@ import { Card } from "../../components/card/Card";
 import { LeftArrow } from "../../assets/icons";
 
 import { newsActions, UsersContext } from "../../context";
-import { Partners } from "../../components/partners/Partners";
 
 export const Home = () => {
+  const { t } = useTranslation();
   const { news, vacancys } = useContext(UsersContext);
 
   useEffect(() => {
@@ -30,13 +34,13 @@ export const Home = () => {
       <div className="container w-[90%] mx-auto mb-20">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-secondary_color text-2xl md:text-4xl font-bold">
-            O'rganmoqchi bo'lgan mavzuni tanlang
+          {t("Header.study")}
           </h1>
           <Link
             to={"news"}
             className="bg-primary_color py-2 px-6 rounded-md text-white flex items-center gap-2 max-md:hidden"
           >
-            Barchasi{" "}
+            {t("Header.All")}
             <span>
               <LeftArrow />
             </span>
@@ -60,8 +64,7 @@ export const Home = () => {
           className="bg-primary_color py-2 px-6 mt-7 text-center rounded-md text-white hidden items-center justify-center gap-2 max-md:flex"
         >
           <p className="gap-2 flex items-center">
-            {" "}
-            Barchasi{" "}
+          {t("Header.All")}
             <span>
               <LeftArrow />
             </span>
@@ -74,13 +77,13 @@ export const Home = () => {
       <div className="container w-[90%] mx-auto mb-20">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-secondary_color text-2xl md:text-4xl font-bold">
-            Vakansiyalar
+          {t("Header.Vacancies")}
           </h1>
           <Link
             to={"vacancies"}
             className="bg-primary_color py-2 px-6 rounded-md text-white flex items-center gap-2 max-md:hidden"
           >
-            Barchasi{" "}
+            {t("Header.All")}
             <span>
               <LeftArrow />
             </span>
@@ -103,8 +106,7 @@ export const Home = () => {
           className="bg-primary_color py-2 px-6 mt-7 text-center rounded-md text-white hidden items-center justify-center gap-2 max-md:flex"
         >
           <p className="gap-2 flex items-center">
-            {" "}
-            Barchasi{" "}
+          {t("Header.All")}
             <span>
               <LeftArrow />
             </span>

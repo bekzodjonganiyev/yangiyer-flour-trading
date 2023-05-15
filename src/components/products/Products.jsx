@@ -7,6 +7,8 @@ import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 
 import { LeftChevron, RigthChevron } from "../../assets/icons";
 
@@ -14,6 +16,7 @@ import apiClient from "../../utils/apiClient";
 import { baseUrl } from "../../context";
 
 function SampleNextArrow(props) {
+  const { t } = useTranslation();
   const { className, style, onClick } = props;
   return (
     <div
@@ -90,6 +93,7 @@ const settings = {
 };
 
 export const Products = () => {
+  const { t } = useTranslation();
   const [products, setProducts] = useState({
     data: [],
     isLoading: true,
@@ -116,7 +120,7 @@ export const Products = () => {
     <div className="bg-[#F0F0F0] py-10 mb-20">
       <div className="container mx-auto w-[90%] mb-10 ">
         <h1 className="text-secondary_color text-4xl font-bold mb-10 text-center">
-          Bizning maxsulotlarimiz
+        {t("Header.OurProducts")}
         </h1>
         {products.isLoading ? (
           <Spinner
