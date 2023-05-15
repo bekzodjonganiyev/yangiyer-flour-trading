@@ -27,6 +27,8 @@ export const ContactForm = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data)
+        alert("Your message successfully sent")
+        window.location.reload()
       })
       .catch((err) => console.log(err));
   };

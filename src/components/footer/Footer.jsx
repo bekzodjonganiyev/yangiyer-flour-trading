@@ -6,6 +6,7 @@ import {
   FacebookIcon,
   TwitterIcon,
   PhoneIcon,
+  Email,
 } from "../../assets/icons";
 import { useTranslation } from "react-i18next";
 import { Link, NavLink } from "react-router-dom";
@@ -62,10 +63,14 @@ export const Footer = () => {
                 <PhoneIcon />
                 <span className="text-white"> +998934497434</span>
               </div>
+              <div className="flex items-center gap-2 my-3">
+                <Email />
+                <span className="text-white"> mirza.kohkan@gmail.com</span>
+              </div>
 
               <div className="flex items-center gap-2 my-3">
                 <Global />
-                <span className="text-white"> YANGIYERFLOURTRADING.uz</span>
+                <a href="https://www.yangiyerflourtrading.uz" target="_blank" className="text-white"> yangiyerflourtrading.uz</a>
               </div>
 
               <div className="flex lg:gap-4 gap-10">

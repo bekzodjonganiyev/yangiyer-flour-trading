@@ -28,8 +28,8 @@ i18n
   .use(HttpApi)
   .init({
     resources,
-    supportedLngs: [  "uz","ru","en","ar"],
-    fallbackLng: "uz",
+    supportedLngs: [ "en",  "uz","ru","ar"],
+    fallbackLng: "en",
     detection: {
       order: [
         "cookie",

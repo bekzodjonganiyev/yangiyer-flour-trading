@@ -12,7 +12,7 @@ export const Partners = () => {
     isLoading: true,
     error: null,
   });
-  
+
   const getData = async () => {
     const res = await apiClient.get("student_bolim/all");
     if (res.status === 200) {
@@ -72,23 +72,23 @@ export const Partners = () => {
   return (
     <div className="mt-[120px] mb-[60px]">
       <h1
-        className={`text-secondary_color text-4xl font-bold text-center my-3`}
+        className={`text-secondary_color text-4xl font-bold text-center my-10`}
       >
-         {t("Header.OurPartners")}
+        {t("Header.OurPartners")}
       </h1>
       <div className=" flex justify-center items-center ">
         <div className="partners container-fluid w-[100%] mx-auto ">
           <Slider {...settings}>
             {partners.data.map((image, id) => (
-              <div key={id} className="h-40">
-                <div className="bg-[#F0F0F0] m-4 py-4 h-40 rounded-xl cursor-pointer flex items-center justify-center">
+              <div className=" py-4 h-40 w-72 rounded-xl cursor-pointer flex items-center justify-center px-10">
+                <a href={image.title_uz} target="_blank" className="border border-red-300 ">
                   <img
-                    className=""
+                    className="h-40 w-56 object-contain text-center"
                     src={image.icon}
                     alt={image.title_uz}
                     title={image.title_uz}
                   />
-                </div>
+                </a>
               </div>
             ))}
           </Slider>
