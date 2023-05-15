@@ -1,4 +1,6 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Zoom, Roll, AttentionSeeker, Reveal } from "react-awesome-reveal";
 
@@ -6,6 +8,7 @@ import { baseUrl } from "../../context";
 import { Link } from "react-router-dom";
 
 export const Card = ({ imgSrc, imgAlt, title, description, to }) => {
+  const { t } = useTranslation();
   return (
     <Reveal>
       <Link to={to}>
@@ -19,12 +22,9 @@ export const Card = ({ imgSrc, imgAlt, title, description, to }) => {
             height={"100%"}
           />
           <h2 className="text-xl text-secondary_color font-semibold mb-4 text-left">
-            {title}
+          {t("NewsCard.title", {news_card_title: title})}
           </h2>
-          <div
-            className="text-secondary_color text-lg line-clamp-3"
-            dangerouslySetInnerHTML={{ __html: description }}
-          />
+         
         </div>
       </Link>
     </Reveal>

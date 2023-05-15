@@ -53,12 +53,14 @@ export const MoreDetails = () => {
             <span className="font-bold">{partners.data.date}</span>
           </div>
           <h1 className="text-4xl font-bold mb-8">
-            {partners.data.title_uz}
+          {t("MoreDetails.title", { more_details_title: `${partners.data?.[`title_${i18next.language}`]}` })}
           </h1>
           <div
-            dangerouslySetInnerHTML={{
-              __html: partners.data.body_uz
-            }}
+           dangerouslySetInnerHTML={{
+            __html: t("MoreDetails.body", {
+              more_details_body: `${partners.data?.[`body_${i18next.language}`]}`,
+            }),
+          }}
           />
         </div>
       )}

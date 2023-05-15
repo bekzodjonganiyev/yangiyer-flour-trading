@@ -44,13 +44,15 @@ export const Navbar = () => {
   };
 
   const changeLanguage = (code) => {
-    let pathnameLang = "uz";
-    if (pathname.split("/")[1] === "uz") pathnameLang = "uz";
-    if (pathname.split("/")[1] === "ru") pathnameLang = "ru";
-    if (pathname.split("/")[1] === "en") pathnameLang = "en";
-    if (pathname.split("/")[1] === "ar") pathnameLang = "ar";
-    navigate(pathname.replace(pathnameLang, code));
+    // let pathnameLang = "uz";
+    // if (pathname.split("/")[1] === "uz") pathnameLang = "uz";
+    // if (pathname.split("/")[1] === "ru") pathnameLang = "ru";
+    // if (pathname.split("/")[1] === "en") pathnameLang = "en";
+    // if (pathname.split("/")[1] === "ar") pathnameLang = "ar";
+    // navigate(pathname.replace(pathnameLang, code));
+    
     i18next.changeLanguage(code);
+    window.location.reload(false);
   };
   return (
     <header

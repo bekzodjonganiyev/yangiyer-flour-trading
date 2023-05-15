@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Spinner } from "flowbite-react";
-
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 import { Card } from "../../components/card/Card";
 import apiClient from "../../utils/apiClient";
 
 export const Vacancies = () => {
+  const { t } = useTranslation();
   const [news, setNews] = useState({
     data: [],
     isLoading: true,
@@ -46,7 +48,7 @@ export const Vacancies = () => {
               key={item._id}
               imgSrc={item.photo}
               imgAlt={item.title_uz}
-              title={item.title_uz}
+              title={t("NewsCard.title", {news_card_title: `${item?.[`title_${i18next.language}`]}`})}
               description={item.body_uz}
             />
           ))

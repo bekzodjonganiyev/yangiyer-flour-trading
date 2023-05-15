@@ -54,8 +54,9 @@ export const Home = () => {
               key={item._id}
               imgSrc={item.photo}
               imgAlt={item.title_uz}
-              title={item.title_uz}
+             
               description={item.body_uz}
+              title={t("NewsCard.title", {news_card_title: `${item?.[`title_${i18next.language}`]}`})}
             />
           ))}
         </div>
@@ -96,7 +97,7 @@ export const Home = () => {
               key={item._id}
               imgSrc={item.photo}
               imgAlt={item.title_uz}
-              title={item.title_uz}
+              title={t("NewsCard.title", {news_card_title: `${item?.[`title_${i18next.language}`]}`})}
               description={item.body_uz}
             />
           ))}
