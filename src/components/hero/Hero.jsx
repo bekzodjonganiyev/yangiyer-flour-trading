@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Spinner } from "flowbite-react";
-import { JackInTheBox, Fade } from "react-awesome-reveal";
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
@@ -14,6 +15,7 @@ import { baseUrl } from "../../context";
 import apiClient from "../../utils/apiClient";
 
 export const Hero = () => {
+  const { t } = useTranslation();
   const [banner, setBanner] = useState({
     data: [],
     isLoading: true,
@@ -141,9 +143,15 @@ export const Hero = () => {
             >
               <HeroIcon />
               <h2 className="text-2xl text-secondary_color  font-bold my-4">
-                {item.title_uz}
+                {t("Motto.title", {
+                  motto_content_title: `${item?.[`title_${i18next.language}`]}`,
+                })}
               </h2>
-              <p className="text-secondary_color text-xl">{item.body_uz}</p>
+              <p className="text-secondary_color text-xl">
+                {t("Motto.desc", {
+                  motto_content_body: `${item?.[`body_${i18next.language}`]}`,
+                })}
+              </p>
             </div>
           ))
         )}

@@ -43,11 +43,15 @@
     "title": "{{news_card_title}}"
   },
   "Motto": {
-    "title": "{{recommend_content_title}}",
-    "desc": "{{recommend_content_title}}"
+    "title": "{{motto_content_title}}",
+    "desc": "{{motto_content_body}}"
   },
   "MoreDetails": {
     "title": "{{more_details_title}}",
     "body": "{{more_details_body}}"
+  },
+  "faq": {
+    "title": "{{faq_content_title}}",
+    "desc": "{{faq_content_body}}"
   }
 }

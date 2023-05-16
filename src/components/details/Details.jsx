@@ -12,7 +12,7 @@ export const MoreDetails = () => {
   const { id } = useParams();
   const all = useParams();
   const navigate = useNavigate();
-  console.log(all)
+  console.log(all);
 
   const [partners, setPartners] = useState({
     data: {},
@@ -53,14 +53,20 @@ export const MoreDetails = () => {
             <span className="font-bold">{partners.data.date}</span>
           </div>
           <h1 className="text-4xl font-bold mb-8">
-          {t("MoreDetails.title", { more_details_title: `${partners.data?.[`title_${i18next.language}`]}` })}
+            {t("MoreDetails.title", {
+              more_details_title: `${
+                partners.data?.[`title_${i18next.language}`]
+              }`,
+            })}
           </h1>
           <div
-           dangerouslySetInnerHTML={{
-            __html: t("MoreDetails.body", {
-              more_details_body: `${partners.data?.[`body_${i18next.language}`]}`,
-            }),
-          }}
+            dangerouslySetInnerHTML={{
+              __html: t("MoreDetails.body", {
+                more_details_body: `${
+                  partners.data?.[`body_${i18next.language}`]
+                }`,
+              }),
+            }}
           />
         </div>
       )}

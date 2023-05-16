@@ -95,5 +95,13 @@
   "MoreDetails": {
     "title": "{{more_details_title}}",
     "body": "{{more_details_body}}"
+  },
+  "Motto": {
+    "title": "{{motto_content_title}}",
+    "desc": "{{motto_content_body}}"
+  },
+  "faq": {
+    "title": "{{faq_content_title}}",
+    "desc": "{{faq_content_body}}"
   }
 }

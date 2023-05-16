@@ -1,89 +1,84 @@
 {
   "Header": {
-    "name":"YANGIYER FLOUR ",
-    "name2":"TRADING",
+    "name": "YANGIYER FLOUR ",
+    "name2": "TRADING",
     "about": "About Us",
     "product": "Products",
     "partners": "Partners",
     "ContactUs": "Contact us",
-    "language":"Language",
-    "Gallary":"Photogallery",
-    "Fotogalery":"Photogallery",
-    "study":"Select the subject you want to study",
-    "OurProducts":"Our Products",
-    "Vacancies":"Vacancies",
-    "Questions":"Frequently Asked Questions",
-    "OurPartners":"Our Partners",
-    "AboutUs":"About Us",
-    "All":"All"
+    "language": "Language",
+    "Gallary": "Photogallery",
+    "Fotogalery": "Photogallery",
+    "study": "Select the subject you want to study",
+    "OurProducts": "Our Products",
+    "Vacancies": "Vacancies",
+    "Questions": "Frequently Asked Questions",
+    "OurPartners": "Our Partners",
+    "AboutUs": "About Us",
+    "All": "All"
   },
-
-  "about":{
-    "title":"LLP Yangiyer Flour Trading is an independent, family owned company. Operating since 1991. Based in the heart of central Asia. LLP Yangiyer Flour Trading operates from their purpose built for producing best quality wheat flour from first class flour to second and third class and offering a service second to none at very competitive prices. With over 30 years’ experience in the wholesale and production market industry. our staff will use their experience and knowledge to help customers achieve their fresh produce collections or deliveries on a daily basis."
-      },
- 
-  "contact":{
-    "name":"Name",
-    "email":"Email",
-    "send":"SEND MESSAGE",
-    "message":"Send message"
+  "about": {
+    "title": "LLP Yangiyer Flour Trading is an independent, family owned company. Operating since 1991. Based in the heart of central Asia. LLP Yangiyer Flour Trading operates from their purpose built for producing best quality wheat flour from first class flour to second and third class and offering a service second to none at very competitive prices. With over 30 years’ experience in the wholesale and production market industry. our staff will use their experience and knowledge to help customers achieve their fresh produce collections or deliveries on a daily basis."
   },
- 
-  "footer":{
-    "name":" Address: Republic of Uzbekistan, Sirdaryo region, Yangiyer city,industrial area"
+  "contact": {
+    "name": "Name",
+    "email": "Email",
+    "send": "SEND MESSAGE",
+    "message": "Send message"
   },
-  "navHeader":{
-    "call":"Call Us",
-    "Email":"Email Us",
-    "Openouse":"Open House"
+  "footer": {
+    "name": " Address: Republic of Uzbekistan, Sirdaryo region, Yangiyer city,industrial area"
   },
-  "name":{
-    "yangiyer":"YANGIYER FLOUR",
-    "trading":"TRADING"
+  "navHeader": {
+    "call": "Call Us",
+    "Email": "Email Us",
+    "Openouse": "Open House"
+  },
+  "name": {
+    "yangiyer": "YANGIYER FLOUR",
+    "trading": "TRADING"
   },
   "Footer": {
     "info": "Certificate: #0987. Issued date: 22.06.2015. Founder: “WEB EXPERT” LLC. Editorial address: 12, K. Yormatov street, Tashkent city, 100043. </br> Email address: info@kun.uz. </br> The opinions expressed in the author's articles published on the site belong to the author and they may not represent the opinion of the editorial staff of Kun.uz. </br> This symbol placed on articles and materials indicates that they are published on the basis of commercial and advertising rights."
   },
-  "rector":{
-    "more":"More",
-    "name":"Usmonov Botir Shukurillayevich",
-    "tite":"Students are the foundation of any nation-building",
-    "description":"The knowledge acquired through education becomes the basis for new discoveries. Because education gives birth to innovation and innovation is important in the development of a nation. Only nations that emphasize innovation are among the leading nations today. Undoubtedly, education is what builds nations."
- 
+  "rector": {
+    "more": "More",
+    "name": "Usmonov Botir Shukurillayevich",
+    "tite": "Students are the foundation of any nation-building",
+    "description": "The knowledge acquired through education becomes the basis for new discoveries. Because education gives birth to innovation and innovation is important in the development of a nation. Only nations that emphasize innovation are among the leading nations today. Undoubtedly, education is what builds nations."
   },
-  "rectorTitle":{
-    "information":"",
-    "informationTitle":"",
-    "Scientific":"",
-    "ScientificTitle":"",
-    "directions":"",
-    "directionsTitle":"",
-     "post":"",
-    "postTitle":""
+  "rectorTitle": {
+    "information": "",
+    "informationTitle": "",
+    "Scientific": "",
+    "ScientificTitle": "",
+    "directions": "",
+    "directionsTitle": "",
+    "post": "",
+    "postTitle": ""
   },
-  "Researcher":{
-    "title":"Virtual Qabulxona",
-    "FIO":"Full Name",
-    "phone":"Phone",
-    "email":"Email",
-    "applicationType":"Type",
-    "applicationType1":"Appeal",
-    "applicationType2":"Complaint",
-    "applicationType3":"Application",
-    "applicationType4":"A note on the personal reception of the leadership",
-    "applicationType5":"Contact the site administration",
-    "applicationTypeDesc":"Content",
-    "file-upload":"Send file",
-    "send":"Send"
-
+  "Researcher": {
+    "title": "Virtual Qabulxona",
+    "FIO": "Full Name",
+    "phone": "Phone",
+    "email": "Email",
+    "applicationType": "Type",
+    "applicationType1": "Appeal",
+    "applicationType2": "Complaint",
+    "applicationType3": "Application",
+    "applicationType4": "A note on the personal reception of the leadership",
+    "applicationType5": "Contact the site administration",
+    "applicationTypeDesc": "Content",
+    "file-upload": "Send file",
+    "send": "Send"
   },
-  "ResearcherOnline":{
-    "statistics":"Application statistics",
-    "Received":"Application statistics",
-    "Accepted":"Accepted",
-    "Rejected":"Rejected",
-    "review":"In review"
-      },
+  "ResearcherOnline": {
+    "statistics": "Application statistics",
+    "Received": "Application statistics",
+    "Accepted": "Accepted",
+    "Rejected": "Rejected",
+    "review": "In review"
+  },
   "Hero": {
     "motto": "A real journalist should be awake... a real journalist should be conscientious...",
     "description": "Today there is a social network user who thinks he is a journalist. But I consider a journalist to be a person who sorts out various fake and credible information and delivers reliable information in the information space."
@@ -99,5 +94,13 @@
   "MoreDetails": {
     "title": "{{more_details_title}}",
     "body": "{{more_details_body}}"
+  },
+  "Motto": {
+    "title": "{{motto_content_title}}",
+    "desc": "{{motto_content_body}}"
+  },
+  "faq": {
+    "title": "{{faq_content_title}}",
+    "desc": "{{faq_content_body}}"
   }
 }
