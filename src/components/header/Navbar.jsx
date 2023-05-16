@@ -63,8 +63,8 @@ export const Navbar = () => {
     >
       <div className="flex items-center justify-between container mx-auto w-[90%]">
         <div className="">
-          <Link to="/" className="my-4 block">
-            <div className="flex items-center">
+          <a href="/" className="my-4 block">
+            <iv className="flex items-center">
               <img src={logo} alt="Main logo" className="w-14 h-14" />
               <p className={`text-white text-center  font-bold`}>
                 <span>
@@ -73,8 +73,8 @@ export const Navbar = () => {
                 </span>
                 <span className={`text-primary_color ml-1`}>TRADING</span>
               </p>
-            </div>
-          </Link>
+            </iv>
+          </a>
         </div>
         <div
           className={`w-3/6 xl:flex justify-end gap-10
@@ -84,8 +84,8 @@ export const Navbar = () => {
               : "hidden"
           }`}
         >
-          <Link
-            to="/"
+          <a
+            href="#"
             className="max-xl:flex items-center hidden pl-14 -mt-20 mb-2 gap-4"
             onClick={() => toggleHamburger()}
           >
@@ -97,36 +97,36 @@ export const Navbar = () => {
               </span>
               <span className={`text-primary_color ml-1`}>TRADING</span>
             </p>
-          </Link>
+          </a>
 
-          <Link
-            to={`#`}
+          <a
+            href={`#aboutus`}
             className="max-xl:pl-14 max-xl:text-[#F06D06] font-bold text-xl max-xl:mb-2"
             onClick={() => toggleHamburger()}
           >
             {t("Header.about")}
-          </Link>
-          <Link
-            to={`#`}
+          </a>
+          <a
+            href={`#products`}
             className="max-xl:pl-14 max-xl:text-[#F06D06] font-bold text-xl max-xl:mb-2"
             onClick={() => toggleHamburger()}
           >
             {t("Header.product")}
-          </Link>
-          <Link
-            to={`#`}
+          </a>
+          <a
+            href={`#partners`}
             className="max-xl:pl-14 max-xl:text-[#F06D06] font-bold text-xl max-xl:mb-2"
             onClick={() => toggleHamburger()}
           >
             {t("Header.partners")}
-          </Link>
-          <Link
-            to={`#`}
+          </a>
+          <a
+            href={`#contactus`}
             className="max-xl:pl-14 max-xl:text-[#F06D06] font-bold text-xl"
             onClick={() => toggleHamburger()}
           >
             {t("Header.ContactUs")}
-          </Link>
+          </a>
           <div className="max-xl:flex gap-4 hidden pl-14 mt-8">
             {" "}
             {language.map((item) => (

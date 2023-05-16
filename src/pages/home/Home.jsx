@@ -28,7 +28,7 @@ export const Home = () => {
   return (
     <div>
       <Hero />
-      <AboutUs />
+      <AboutUs id={"aboutus"}/>
       <ImageGallary />
     
       <div className="container w-[90%] mx-auto mb-20">
@@ -73,7 +73,7 @@ export const Home = () => {
         </Link>
       </div>
 
-      <Products />
+      <Products id={"products"}/>
 
       <div className="container w-[90%] mx-auto mb-20">
         <div className="flex justify-between items-center mb-8">
@@ -116,7 +116,9 @@ export const Home = () => {
       </div>
 
       <Accardion />
-      <Partners />
+
+      <Partners id={"partners"}/>
+
       <ContactForm />
     </div>
   );

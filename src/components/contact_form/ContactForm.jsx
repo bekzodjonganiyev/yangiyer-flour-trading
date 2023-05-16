@@ -39,8 +39,8 @@ export const ContactForm = () => {
           <div className="">
             <form onSubmit={sendEmail} className="container h-[full] my-3 ">
               <div className="mx-auto w-[95%] ">
-                <h2 className="text-5xl font-bold text-[#0B2A5A] my-5">
-                {t("Header.AboutUs")}
+                <h2 className="text-5xl font-bold text-[#0B2A5A] my-5" id="contactus">
+                {t("Header.ContactUs")}
                 </h2>
                 <label className="">
                   <input

@@ -1,11 +1,9 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import Slider from "react-slick";
-import { baseUrl } from "../../context";
 import apiClient from "../../utils/apiClient";
-import i18next from "i18next";
 import { useTranslation } from "react-i18next";
-export const Partners = () => {
+export const Partners = ({id}) => {
   const { t } = useTranslation();
   const [partners, setPartners] = useState({
     data: [],
@@ -70,7 +68,7 @@ export const Partners = () => {
   };
 
   return (
-    <div className="mt-[120px] mb-[60px]">
+    <div className="mt-[120px] mb-[60px]" id={id}>
       <h1
         className={`text-secondary_color text-4xl font-bold text-center my-10`}
       >

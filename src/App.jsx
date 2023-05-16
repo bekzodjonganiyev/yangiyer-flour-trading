@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 import { Layout } from "./components/layout";
-import {MoreDetails} from "./components/details/Details";
+import { MoreDetails } from "./components/details/Details";
 import { Home } from "./pages/home/Home";
 import { News } from "./pages/news/News";
 import { Vacancies } from "./pages/vacancies/Vacancies";
