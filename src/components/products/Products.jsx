@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Spinner } from "flowbite-react";
-import { Slide } from "react-awesome-reveal";
+import { Slide, Fade } from "react-awesome-reveal";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
@@ -130,7 +130,7 @@ export const Products = ({ id }) => {
         ) : (
           <Slider {...settings}>
             {products.data.map((item) => (
-              <Slide direction="right" key={item._id} className="px-3">
+              <Fade key={item._id} className="px-3">
                 <LazyLoadImage
                   key={item._id}
                   src={`${baseUrl}/${item.link}`}
@@ -140,7 +140,7 @@ export const Products = ({ id }) => {
                   width={"100%"}
                   height={"100%"}
                 />
-              </Slide>
+              </Fade>
             ))}
           </Slider>
         )}
