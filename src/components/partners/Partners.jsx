@@ -81,7 +81,11 @@ export const Partners = () => {
           <Slider {...settings}>
             {partners.data.map((image, id) => (
               <div className=" py-4 h-40 w-72 rounded-xl cursor-pointer flex items-center justify-center px-10">
-                <a href={image.title_uz} target="_blank" className="border border-red-300 ">
+                <a
+                  href={"https://" + image.title_uz}
+                  target="_blank"
+                  className="border border-red-300 "
+                >
                   <img
                     className="h-40 w-56 object-contain text-center"
                     src={image.icon}
