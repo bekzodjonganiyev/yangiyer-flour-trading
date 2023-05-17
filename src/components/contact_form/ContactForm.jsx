@@ -73,7 +73,7 @@ export const ContactForm = () => {
 
                 <label className="block ">
                   <textarea
-                    minLength={100}
+                    minLength={20}
                     cols="30"
                     required
                     rows="10"

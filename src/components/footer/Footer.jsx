@@ -61,7 +61,7 @@ export const Footer = () => {
             <div className="lg:flex lg:flex-col flex-row-reverse   max-md:flex-col max-md:gap-10 ">
               <div className="flex items-center gap-2 my-3">
                 <PhoneIcon />
-                <span className="text-white"> +998934497434</span>
+                <span className="text-white"> +998909795055</span>
               </div>
               <div className="flex items-center gap-2 my-3">
                 <Email />
