@@ -80,7 +80,7 @@ export const Partners = ({id}) => {
             {partners.data.map((image, id) => (
               <div className=" py-4 h-40 w-72 rounded-xl cursor-pointer flex items-center justify-center px-10">
                 <a
-                  href={"https://" + image.title_uz}
+                  href={image.title_uz}
                   target="_blank"
                   className="border border-red-300 "
                 >
