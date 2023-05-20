@@ -7,8 +7,8 @@
     "partners": "Partners",
     "ContactUs": "Contact us",
     "language": "Language",
-    "Gallary": "Photogallery",
-    "Fotogalery": "Photogallery",
+    "Gallary": "Photo gallery",
+    "Fotogalery": "Photo gallery",
     "study": "Select the subject you want to study",
     "OurProducts": "Our Products",
     "Vacancies": "Vacancies",
@@ -38,40 +38,7 @@
     "yangiyer": "YANGIYER FLOUR",
     "trading": "TRADING"
   },
-  "Footer": {
-    "info": "Certificate: #0987. Issued date: 22.06.2015. Founder: “WEB EXPERT” LLC. Editorial address: 12, K. Yormatov street, Tashkent city, 100043. </br> Email address: info@kun.uz. </br> The opinions expressed in the author's articles published on the site belong to the author and they may not represent the opinion of the editorial staff of Kun.uz. </br> This symbol placed on articles and materials indicates that they are published on the basis of commercial and advertising rights."
-  },
-  "rector": {
-    "more": "More",
-    "name": "Usmonov Botir Shukurillayevich",
-    "tite": "Students are the foundation of any nation-building",
-    "description": "The knowledge acquired through education becomes the basis for new discoveries. Because education gives birth to innovation and innovation is important in the development of a nation. Only nations that emphasize innovation are among the leading nations today. Undoubtedly, education is what builds nations."
-  },
-  "rectorTitle": {
-    "information": "",
-    "informationTitle": "",
-    "Scientific": "",
-    "ScientificTitle": "",
-    "directions": "",
-    "directionsTitle": "",
-    "post": "",
-    "postTitle": ""
-  },
-  "Researcher": {
-    "title": "Virtual Qabulxona",
-    "FIO": "Full Name",
-    "phone": "Phone",
-    "email": "Email",
-    "applicationType": "Type",
-    "applicationType1": "Appeal",
-    "applicationType2": "Complaint",
-    "applicationType3": "Application",
-    "applicationType4": "A note on the personal reception of the leadership",
-    "applicationType5": "Contact the site administration",
-    "applicationTypeDesc": "Content",
-    "file-upload": "Send file",
-    "send": "Send"
-  },
+ 
   "ResearcherOnline": {
     "statistics": "Application statistics",
     "Received": "Application statistics",

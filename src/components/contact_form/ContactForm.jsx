@@ -26,9 +26,9 @@ export const ContactForm = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
-        alert("Your message successfully sent")
-        window.location.reload()
+        console.log(data);
+        alert("Your message successfully sent");
+        window.location.reload();
       })
       .catch((err) => console.log(err));
   };
@@ -39,8 +39,11 @@ export const ContactForm = () => {
           <div className="">
             <form onSubmit={sendEmail} className="container h-[full] my-3 ">
               <div className="mx-auto w-[95%] ">
-                <h2 className="text-5xl font-bold text-[#0B2A5A] my-5" id="contactus">
-                {t("Header.ContactUs")}
+                <h2
+                  className="text-5xl font-bold text-[#0B2A5A] my-5"
+                  id="contactus"
+                >
+                  {t("Header.ContactUs")}
                 </h2>
                 <label className="">
                   <input
@@ -99,11 +102,13 @@ export const ContactForm = () => {
 
         {/* <div className="max-md:w-full w-full rounded-3xl"> */}
         <iframe
-          className="w-1/2 rounded-3xl max-md:w-full max-md:h-96"
-          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2997.971617605521!2d69.2168139758326!3d41.287722171312694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDE3JzE1LjgiTiA2OcKwMTMnMDkuOCJF!5e0!3m2!1sru!2s!4v1682497109753!5m2!1sru!2s"
-          allowFullScreen
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1181.1895909939317!2d69.21878063797728!3d41.2875452257138!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8be0fdfbfecd%3A0x6c5afd84eb8438a6!2sLLC%20%22YANGIYER%20FLOUR%20TRADING%22!5e0!3m2!1suz!2s!4v1684500868007!5m2!1suz!2s"
+          width="600"
+          height="450"
+         
+          allowfullscreen=""
           loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
+          referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
         {/* </div> */}
       </div>

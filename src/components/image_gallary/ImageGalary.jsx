@@ -70,7 +70,7 @@ export const ImageGallary = () => {
     getData();
   }, []);
   return (
-    <div className="mb-20 container w-[90%] mx-auto">
+    <div className="mb-24 container w-[90%] mx-auto">
       <div className="flex justify-between items-center mb-8  ">
         <h1 className="text-secondary_color text-2xl md:text-4xl font-bold">
           {t("Header.Fotogalery")}
