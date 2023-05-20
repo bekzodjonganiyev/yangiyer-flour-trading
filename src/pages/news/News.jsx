@@ -34,7 +34,7 @@ export const News = () => {
       <h1 className="text-3xl text-secondary_color container mx-auto w-[90%] mt-10 font-bold">
         News
       </h1>
-      <div className="container mx-auto w-[90%] grid grid-cols-3 py-10 ">
+      <div className="container mx-auto w-[90%] grid grid-cols-3 gap-6 py-10 ">
         {news.isLoading ? (
           <Spinner
             color="info"
@@ -44,6 +44,7 @@ export const News = () => {
         ) : (
           news.data.map((item) => (
             <Card
+              to={`/details/news/${item._id}`}
               className={""}
               key={item._id}
               imgSrc={item.photo}

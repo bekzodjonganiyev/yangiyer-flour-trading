@@ -9,7 +9,7 @@ import {
   Email,
 } from "../../assets/icons";
 import { useTranslation } from "react-i18next";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 
 export const Footer = () => {
@@ -39,19 +39,19 @@ export const Footer = () => {
               <div
                 className={` mx-auto my-12  flex items-center justify-end text-white font-bold xl:text-base `}
               >
-                <NavLink to="#">
+                <a href="#aboutus">
                   <span className="mx-3">{t("Header.about")}</span>{" "}
-                </NavLink>
-                <NavLink to="#">
+                </a>
+                <a href="#products">
                   <span className="mx-3">{t("Header.product")}</span>{" "}
-                </NavLink>
+                </a>
 
-                <NavLink to="#">
+                <a href="#partners">
                   <span className="mx-3">{t("Header.partners")}</span>
-                </NavLink>
-                <NavLink to="#">
+                </a>
+                <a href="#contactus">
                   <span className="mx-3">{t("Header.ContactUs")}</span>
-                </NavLink>
+                </a>
               </div>
             </div>
           </div>
@@ -70,7 +70,14 @@ export const Footer = () => {
 
               <div className="flex items-center gap-2 my-3">
                 <Global />
-                <a href="https://www.yangiyerflourtrading.uz" target="_blank" className="text-white"> yangiyerflourtrading.uz</a>
+                <a
+                  href="https://www.yangiyerflourtrading.uz"
+                  target="_blank"
+                  className="text-white"
+                >
+                  {" "}
+                  yangiyerflourtrading.uz
+                </a>
               </div>
 
               <div className="flex lg:gap-4 gap-10">

@@ -17,7 +17,7 @@ import { LeftArrow } from "../../assets/icons";
 import apiClient from "../../utils/apiClient";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
-export const ImageGallary = () => {
+export const ImageGallary = ({ all }) => {
   const { t } = useTranslation();
   const [photos, setPhotos] = useState({
     data: [],
@@ -71,20 +71,26 @@ export const ImageGallary = () => {
   }, []);
   return (
     <div className="mb-24 container w-[90%] mx-auto">
-      <div className="flex justify-between items-center mb-8  ">
-        <h1 className="text-secondary_color text-2xl md:text-4xl font-bold">
-          {t("Header.Fotogalery")}
+      {all ? (
+        <h1 className="text-3xl text-secondary_color container mx-auto my-10 font-bold">
+          Photos
         </h1>
-        <Link
-          to={"photos"}
-          className="bg-primary_color py-2 px-6 rounded-md text-white flex items-center gap-2 max-md:hidden"
-        >
-          {t("Header.All")}
-          <span>
-            <LeftArrow />
-          </span>
-        </Link>
-      </div>
+      ) : (
+        <div className="flex justify-between items-center mb-8  ">
+          <h1 className="text-secondary_color text-2xl md:text-4xl font-bold">
+            {t("Header.Fotogalery")}
+          </h1>
+          <Link
+            to={"photos"}
+            className="bg-primary_color py-2 px-6 rounded-md text-white flex items-center gap-2 max-md:hidden"
+          >
+            {t("Header.All")}
+            <span>
+              <LeftArrow />
+            </span>
+          </Link>
+        </div>
+      )}
       {photos.isLoading ? (
         <Spinner
           color="info"
