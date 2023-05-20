@@ -34,7 +34,7 @@ export const Navbar = () => {
     },
     {
       code: "ar",
-      name: "Ar",
+      name: "Fr",
       conuntry_code: "ar",
     },
   ];
