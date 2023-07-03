@@ -42,7 +42,7 @@ export const Vacancies = () => {
             size="xl"
           />
         ) : (
-          news.data.map((item) => (
+          news.data.reverse().map((item) => (
             <Card
               to={`/details/elon/${item._id}`}
               className={""}

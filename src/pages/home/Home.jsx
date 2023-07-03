@@ -47,7 +47,7 @@ export const Home = () => {
           </Link>
         </div>
         <div className="grid grid-cols-4 max-md:grid-cols-1 gap-6">
-          {news.slice(0, 4).map((item) => (
+          {news.slice(0, 4).reverse().map((item) => (
             <Card
               to={`details/news/${item._id}`}
               className={""}
@@ -91,7 +91,7 @@ export const Home = () => {
           </Link>
         </div>
         <div className="grid grid-cols-3 max-md:grid-cols-1 gap-6">
-          {vacancys.slice(0, 3).map((item) => (
+          {vacancys.slice(0, 3).reverse().map((item) => (
             <Card
               to={`details/elon/${item._id}`}
               key={item._id}

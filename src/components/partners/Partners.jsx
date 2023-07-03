@@ -36,9 +36,9 @@ export const Partners = ({id}) => {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 2000,
     pauseOnHover: true,
-    delay: 300,
+    delay: 500,
     responsive: [
       {
         breakpoint: 1024,
@@ -75,14 +75,14 @@ export const Partners = ({id}) => {
         {t("Header.OurPartners")}
       </h1>
       <div className=" flex justify-center items-center ">
-        <div className="partners container-fluid w-[100%] mx-auto ">
+        <div className="container w-[100%] mx-auto">
           <Slider {...settings}>
             {partners.data.map((image, id) => (
-              <div className=" py-4 h-40 w-72 rounded-xl cursor-pointer flex items-center justify-center px-10">
+              <div className="py-4 h-40 w-72 rounded-xl cursor-pointer px-10">
                 <a
                   href={image.title_uz}
                   target="_blank"
-                  className="border border-red-300 "
+                  className="flex items-center justify-center"
                 >
                   <img
                     className="h-40 w-56 object-contain text-center"

@@ -42,7 +42,7 @@ export const News = () => {
             size="xl"
           />
         ) : (
-          news.data.map((item) => (
+          news.data.reverse().map((item) => (
             <Card
               to={`/details/news/${item._id}`}
               className={""}
