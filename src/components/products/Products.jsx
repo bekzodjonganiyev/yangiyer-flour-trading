@@ -130,13 +130,13 @@ export const Products = ({ id }) => {
         ) : (
           <Slider {...settings}>
             {products.data.map((item) => (
-              <Fade key={item._id} className="px-3">
+              <Fade key={item._id} className="px-3 h-[600px]">
                 <LazyLoadImage
                   key={item._id}
                   src={`${baseUrl}/${item.link}`}
                   alt={item.name}
                   effect={"opacity"}
-                  className="w-full img-lazy rounded mb-4"
+                  className="w-full h-full object-fill img-lazy rounded mb-4"
                   width={"100%"}
                   height={"100%"}
                 />

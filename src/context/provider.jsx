@@ -5,7 +5,8 @@ import { UsersContext, ScrollContext } from "./context";
 export let newsActions = null;
 export let smallActions = null;
 export let userActions = null;
-export const baseUrl = "https://tkti-back-lexde.ondigitalocean.app";
+export const baseUrl = "https://coral-app-bsinx.ondigitalocean.app";
+// export const baseUrl = "http://localhost:5001";
 
 export const UsersProvider = ({ children }) => {
   // Scroll value handled here

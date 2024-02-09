@@ -16,7 +16,7 @@ export const ContactForm = () => {
       message: e.target.message.value,
     };
 
-    fetch("https://tkti-back-lexde.ondigitalocean.app/send", {
+    fetch("https://coral-app-bsinx.ondigitalocean.app/send", {
       method: "POST",
       body: JSON.stringify(obj),
       headers: {
