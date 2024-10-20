@@ -1,47 +1,105 @@
-import React from "react";
+import { useEffect, useContext } from "react";
+import { Partners } from "../../components/partners/Partners";
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 
-import { AboutUs } from "../../components/about_us";
-import { Gallary } from "../../components/gallary/Gallary";
+import { Link } from "react-router-dom";
 
-import { Products } from "../../components/products";
-import { Partners } from "../../components/partners";
-import { ContactUs } from "../contact_us/ContactUs";
+import { Hero } from "../../components/hero/Hero";
+import { Accardion } from "../../components/faq/Accardion";
+import { AboutUs } from "../../components/about_us/AboutUs";
+import { ContactForm } from "../../components/contact_form/ContactForm";
+import { ImageGallary } from "../../components/image_gallary/ImageGalary";
+import { Products } from "../../components/products/Products";
+import { Card } from "../../components/card/Card";
+import { LeftArrow } from "../../assets/icons";
 
-import { useAppContext } from "../../context/app.contex";
-import BannerVideo from "../../components/bannerVideo/BannerVideo";
+import { newsActions, UsersContext } from "../../context";
+import { News } from "../news/News";
 
 export const Home = () => {
-  console.log("Home");
-  const { colors } = useAppContext();
+  const { t } = useTranslation();
+  const { news, vacancys } = useContext(UsersContext);
+
+  useEffect(() => {
+    newsActions.getNews("news/all");
+    newsActions.getNews("elon/all");
+  }, []);
 
   return (
     <div>
-      <BannerVideo />
-      <AboutUs />
-      <Products />
-      {/* <div className="my-10">
-        <h1
-          className={`${colors.lightTextColor2} font-bold text-3xl mb-8 text-center`}
-        >
-          Leadership
-        </h1>
-        <div className="flex items-center">
-          <div className="w-2/6">
-            <img src={fakeVerstka2} alt="fake versta" />
-          </div>
-          <div className="w-4/6 flex gap-2 h-96">
-            {
-              [1,2,3,4].map(item => (
-                <LidershipCard key={item}/>
-              ))
-            }
-          </div>
-        </div>
-      </div> */}
+      <Hero />
+      <AboutUs id={"aboutus"}/>
+      <ImageGallary />
+    <div className="mb-10">
 
-      <Gallary />
-      <Partners />
-      <ContactUs />
+   
+      <div className="container w-[90%] mx-auto">
+        <div className="flex justify-between items-center mb-8">
+          <h1 className="text-secondary_color text-2xl md:text-4xl font-bold">
+          {t("Header.study")}
+          </h1>
+          <Link
+            to={"news"}
+            className="bg-primary_color py-2 px-6 rounded-md text-white flex items-center gap-2 max-md:hidden"
+          >
+            {t("Header.All")}
+            <span>
+              <LeftArrow />
+            </span>
+          </Link>
+        </div>
+      
+      </div>
+        <News/>
+      </div>
+      <Products id={"products"}/>
+
+      <div className="container w-[90%] mx-auto mb-20">
+        <div className="flex justify-between items-center mb-8">
+          <h1 className="text-secondary_color text-2xl md:text-4xl font-bold">
+          {t("Header.Vacancies")}
+          </h1>
+          <Link
+            to={"vacancies"}
+            className="bg-primary_color py-2 px-6 rounded-md text-white flex items-center gap-2 max-md:hidden"
+          >
+            {t("Header.All")}
+            <span>
+              <LeftArrow />
+            </span>
+          </Link>
+        </div>
+        <div className="grid grid-cols-3 max-md:grid-cols-1 gap-6">
+          {vacancys.slice(0, 3).reverse().map((item) => (
+            <Card
+              to={`details/elon/${item._id}`}
+              key={item._id}
+              imgSrc={item.photo}
+              imgAlt={item.title_uz}
+              title={t("NewsCard.title", {news_card_title: `${item?.[`title_${i18next.language}`]}`})}
+              description={item.body_uz}
+            />
+          ))}
+        </div>
+        <Link
+          to={"vacancies"}
+          className="bg-primary_color py-2 px-6 mt-7 text-center rounded-md text-white hidden items-center justify-center gap-2 max-md:flex"
+        >
+          <p className="gap-2 flex items-center">
+          {t("Header.All")}
+            <span>
+              <LeftArrow />
+            </span>
+          </p>
+        </Link>
+      </div>
+
+      <Accardion />
+
+      <Partners id={"partners"}/>
+
+      <ContactForm />
     </div>
   );
 };
